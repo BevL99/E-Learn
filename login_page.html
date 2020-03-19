@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body
+  style="background-image: url('lgn_bkgnd.png');"
+>
+
+<header>E-Learn</header>
+
+<div class="imgcontainer">
+  <img src="dlearn.png" alt="Avatar" class="avatar"
+      style='height: 100%; width: 100%; object-fit: contain'>
+</div>
+
+<div class="lgncontainer">
+  <form action="student_home_pg.html" method="get">
+    <body
+    style="width: 100px;"
+    >
+    <h2>Sign On</h2>
+
+    <label for="uid"><b>USER ID</b></label>
+    <input type="text" placeholder="Enter UserID" name="uid" required>
+
+    <label for="psw"><b>PASSWORD</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login as Student</button>
+    
+    <button type="submit" formaction="staff_home_pg.html">Login as Staff</button>
+   
+    <span class="psw"> <a href="forgot_pw_pg.html">Forgot password?</a></span>
+</form>
+</div>  
+
+</body>
+</html>
