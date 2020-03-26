@@ -5,24 +5,102 @@
         <title>Home Page</title>
         <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
+<style>
+
+  header {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    height: 40px;
+    padding: 10px;
+    color: white;
+    background: rgb(81, 81, 206);
+  }
+
+.summaryitems{
+    height: 100px;
+    background:white;
+    color:rgb(81,81,206);
+    margin-left: 15px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.containdiv{
+    display: flex;
+    margin-top: 10px;
+}
+.left{
+    height: 100vh;
+    margin-bottom: 20px;
+    width: 50%;
+    margin-left: 15px;
+    background: rgba(220, 220, 255, 0.65);
+}
+.right{
+    height: 100vh;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    flex-grow: 1;
+    background: white;
+}
+.courses{
+    height: 100px;
+    background: rgba(220, 220, 255, 0.65);
+    color: rgb(81,81,206);
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+</style>
+
+<body>
 <header>
-  <h2>Home</h2>
+  Home
 </header>
 
 
-  <div class="sidenav">
-    <a href="#about">Resources</a>
-    <a href="#services">Workshop</a>
-    <a href="#clients">Assessments</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <div class="containdiv">
+    <div class="left">
+      <section class="summaryitems">
+        <h3>Click <u>here</u> to Workspace</h3>
+      </section>
 
-  <div class ="main">
-    
-  </div>
+      <section class="summaryitems">
+        <h3>Your upcoming activities</h3>
+      </section>
 
+      <section class="summaryitems">
+        <h3>Your previous courses</h3>
+      </section>
+
+    </div>
+      
+    <div class="right">
+      <section class = "courses">
+        <h4>INFS3605</h4>
+        <p>
+          IS Innovation & Transformation
+        </p>
+      </section>
+
+      <section class = "courses">
+        <h4>INFS3617</h4>
+        <p>
+          Networking & Cyber Security
+        </p>
+      </section>
+
+      <section class = "courses">
+        <h4>INFS3830</h4>
+        <p>
+          Social Media and Analytics
+        </p>
+      </section>
+    </div>
+  </div>
+ 
 
 </body>
 </html>
