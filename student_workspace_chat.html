@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
+
     <style>
         body {
             margin: 0;
@@ -69,61 +71,6 @@
                 margin-left: 50px;
             }
 
-        #main {
-            transition: margin-left .5s;
-            padding: 16px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-                .sidenav a {
-                    font-size: 18px;
-                }
-        }
-
-
-        .summaryitems {
-            height: 220px;
-            
-            color: rgb(0,0,0);
-            margin-left: 15px;
-            margin-right: 20px;
-            text-align: left;
-        }
-
-        .containdiv {
-            display:flex;
-            margin-top: 10px;
-            background: rgba(208, 240, 192, 0.65);
-        }
-
-        .left {
-            height: 100vh;
-            margin-bottom: 20px;
-            background-color: white;
-            margin-left: 15px;
-            flex-grow: 1;
-        }
-
-        .right {
-            height: 100vh;
-            margin-bottom: 20px;
-            margin-right: 15px;
-            flex-grow: 1;
-        }
-
-        .courses {
-            height: 100px;
-            background: #ffffff;
-            color: rgb(0,0,0);
-            margin-left: 20px;
-            margin-right: 15px;
-        }
-
-
         .dropdown {
             float: right;
             overflow: hidden;
@@ -166,6 +113,60 @@
             display: block;
         }
 
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+
+
+        .summaryitems {
+            height: 220px;
+            color: rgb(0,0,0);
+            margin-left: 15px;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        .containdiv {
+            height: 500px;
+            flex-grow: 1;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            background: rgba(208, 240, 192, 0.65);
+        }
+
+        .left {
+            height: 100vh;
+            margin-bottom: 20px;
+            background-color: white;
+            margin-left: 15px;
+            flex-grow: 1;
+        }
+
+        .right {
+            height: 100vh;
+            margin-bottom: 20px;
+            margin-right: 15px;
+            flex-grow: 1;
+        }
+
+        .courses {
+            height: 100px;
+            background: #ffffff;
+            color: rgb(0,0,0);
+            margin-left: 20px;
+            margin-right: 15px;
+        }
     </style>
 </head>
 <body>
@@ -176,10 +177,13 @@
     </div>
 
     <div class="header" id="myHeader">
-        <span style="font-size:30px;position: absolute; left: 10px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span><h2 style='display: inline;'><b>My Dashboard</b></h2>
+        <span style="font-size:30px;position: absolute; left: 20px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span>
+        <h2 style='display: inline;'><b>My Workspace</b></h2>
+        <span style="position:absolute; right: 160px; bottom: 605px"><a href="student_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
+
         <div class="dropdown">
             <button class="dropbtn">
-                John Doe
+                Rachel Johnson
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
@@ -188,18 +192,18 @@
                 <a href="#">Settings</a>
             </div>
         </div>
+
     </div>
+
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <br />
         <br />
 
-        <a href="staff_home_pg.html"><i class="fa fa-home"></i> Home</a>
-        <a href="staff_workspace_session.html"><i class="fa fa-comments"></i> Sessions</a>
-        <a href="#"><i class="fa fa-users"></i> Groups</a>
-        <a href="#"><i class="fa fa-address-book"></i> Contacts</a>
-        <a href="#"><i class="fa fa-user-circle"></i> My Profile</a>
+        <a href="student_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
+        <a href="student_workspace_group.html"><i class="fa fa-users"></i> Groups</a>
+        <a href="student_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
         <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
         <br />
         <br />
@@ -217,64 +221,17 @@
         <br />
         <br />
         <br />
-        <a href="#"><i class="fa fa-question-circle"></i> Help</a>
+        <a href="student_help.html"><i class="fa fa-question-circle"></i> Help</a>
     </div>
 
-    
-
-    <div id="main">
-       
-        <div class="containdiv">
-            <div class="left">
-                <section class="summaryitems">
-                    <h3 style="padding-left: 5px;padding-top:5px"> MySpace: </h3>
-                    <h4 style="padding-left: 25px;padding-top:5px"><a href="staff_workspace_session.html"> >> Click <u>here</u> to enter your Workspace</a></h4>
-                    
-                </section>
-
-                <section class="summaryitems">
-                    <h3 style="padding-left: 5px;padding-top:5px">Your Announcements:</h3>
-                    <br />
-                    <br />
-                </section>
-
-                <section class="summaryitems">
-                    <h3 style="padding-left: 5px;padding-top:5px">Upcoming Student Submissions:</h3>
-                    <br />
-                    <br />
-                </section>
-
-            </div>
-            <div class="right">
-                <h3 style="padding-left: 15px">Course Overview:</h3>
-                <section class="courses">
-                    <h4 style="padding-left: 5px;padding-top:5px;color:black"><a href="staff_course_detail_pg1.html">INFS1602: Digital Transformation in Business </a></h4>
-                    <p style="padding-left: 5px;color:blue"><a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS1602" target="_blank">Course Outline</a>
-                        
-                    </p>
-
-                    
-                </section>
-
-                <section class="courses">
-                    <h4 style="padding-left: 5px;padding-top:5px;color:black"><a href="staff_course_detail_pg2.html">INFS1603: Introduction to Business Databases</a></h4>
-                    <p style="padding-left: 5px;color:blue"><a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS1603" target="_blank"> Course Outline</a>
-                        
-                    </p>
-                </section>
-
-                <section class="courses">
-                    <h4 style="padding-left: 5px;padding-top:5px;color:black"><a href="staff_course_detail_pg1.html">INFS1609: Fundamentals of Business Programming</a></h4>
-                    <p style="padding-left: 5px; padding-bottom:50px;color:blue"><a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS1609" target="_blank"> Course Outline</a>
-                        
-                    </p>
-                </section>
-
-            </div>
 
 
+    <div id="main" sstyle="background: rgba(208, 240, 192, 0.65);">
+        <div id="containdiv">
+            <h3>Chats List</h3>
+            <hr />
+            <br />
         </div>
-
     </div>
 
     <script>
@@ -294,9 +251,9 @@
         function openNav() {
             document.getElementById("mySidenav").style.width = "300px";
             document.getElementById("main").style.marginLeft = "300px";
-            
-           
-          
+
+
+
 
 
         }
@@ -305,10 +262,11 @@
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
             document.body.style.backgroundColor = "white";
-          
+
         }
     </script>
 
 
 </body>
 </html>
+
