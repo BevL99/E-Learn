@@ -1,36 +1,31 @@
 <?php
-//Step1
-$db = mysqli_connect('localhost','root','','infs3605')
-or die('Error connecting to MySQL server.');
-?>
 
-<?php
+error_reporting(0);
 
-if (isset($_POST['submit'])) {
+if(isset($_POST['submit'])){
+    
+    $db = mysqli_connect('localhost','root','','infs3605')
+ or die('Error connecting to MySQL server.');
+
     $username = $_POST['uid'];
     $password = $_POST['psw'];
+    $error = "";
+    $success = "";
 
-    $username = stripcslashes($username);
-    $password = stripcslashes($password);
-    $username = mysql_real_escape_string($username);
-    $password = mysql_real_escape_string($password);
+    $query = "SELECT * FROM STUDENT WHERE STUDENT_ID = '$username' AND STUDENT_PASSWORD = '$password'";
+    mysqli_query($db, $query) or die('Error querying database.');
 
-    mysql_connect("localhost", "root", "");
-    mysql_select_db("infs3605");
+    $result = mysqli_query($db, $query);
+	$row = mysqli_fetch_array($result);
 
-    $result = mysql_query("select * from from student where STUDENT_ID = '$username' and STUDENT_PASSWORD = '$password'")
-        or die("Failed to query database ".mysql_error());
-    $row = mysql_fetch_array($result);
-
-    if($row['STUDENT_ID'] == $username && $row['STUDENT_PASSWORD'] == $password){
-        header("Location: http://localhost/INFS3605%20E-Learn/student_home_pg.php");
-
-    } else{
-        echo "Failed to login!";
+	if ($row['STUDENT_ID'] == $username && $row['STUDENT_PASSWORD'] == $password){
+        $success="Login Successful";
+        header("Location: student_home_pg.php");
     }
+    else{
+        $error="Invalid Username or Password! ";
+	}
 }
-
-
 ?>
 
 <html>
@@ -127,7 +122,8 @@ if (isset($_POST['submit'])) {
     </div>
 
     <div class="lgncontainer">
-        <form id="" action=" . <?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+        
+        <form method="post">
 
             <h2 align="center">
                 <font size="8">E-Learn Sign On</font>
@@ -145,9 +141,15 @@ if (isset($_POST['submit'])) {
             </label>
             <input type="password" placeholder="Enter your password" id="psw" name="psw" required />
 
-            <br />
+           
+
+            <p class="error" align="center" style="color:red">
+                <?php echo $error; ?>
+            </p>
+           
 
             <p align="center">
+
                 <font size="2">
                     I agree to the
                     <b>Terms & Conditions</b> of using UNSW ICT resources as set out in the policy and procedures.
@@ -156,11 +158,12 @@ if (isset($_POST['submit'])) {
 
             <div class="btncontainer">
 
-                <button type="submit" class="button" id="submit" value="submit">Agree and sign on as Student</button>
+                <button type="submit" class="button" id="submit" name="submit" >Agree and sign on as Student</button>
 
                 <button type="submit" class="button" formaction="staff_home_pg.html">Agree and sign on as Staff</button>
-
+                
             </div>
+
             <span class="psw">
                 <a href="forgot_pw_pg.html">Forgot password?</a>
             </span>
