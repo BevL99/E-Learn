@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -167,6 +167,27 @@
             margin-left: 20px;
             margin-right: 15px;
         }
+
+        .search-container button {
+            
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-container {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 200%;
+            margin: 0;
+            padding: 14px;
+        }
+        
     </style>
 </head>
 <body>
@@ -177,13 +198,13 @@
     </div>
 
     <div class="header" id="myHeader">
-        <span style="font-size:30px;position: absolute; left: 20px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span>
+        <span style="font-size:30px;position: absolute; left: 20px; bottom: 590px;cursor:pointer" onclick="openNav()"> &#9776; </span>
         <h2 style='display: inline;'><b>My Workspace</b></h2>
-        <span style="position:absolute; right: 160px; bottom: 605px"><a href="student_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
+        <span style="position:absolute; right: 120px; bottom: 590px"><a href="staff_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
 
         <div class="dropdown">
             <button class="dropbtn">
-                Rachel Johnson
+                John Doe
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
@@ -201,9 +222,9 @@
         <br />
         <br />
 
-        <a href="student_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
-        <a href="student_workspace_group.html"><i class="fa fa-users"></i> Groups</a>
-        <a href="student_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
+        <a href="staff_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
+        <a href="staff_workspace_group.html"><i class="fa fa-users"></i> Groups</a>
+        <a href="staff_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
         <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
         <br />
         <br />
@@ -221,16 +242,23 @@
         <br />
         <br />
         <br />
-        <a href="student_help.html"><i class="fa fa-question-circle"></i> Help</a>
+        <a href="staff_help.html"><i class="fa fa-question-circle"></i> Help</a>
     </div>
 
 
 
     <div id="main" sstyle="background: rgba(208, 240, 192, 0.65);">
         <div id="containdiv">
-            <h3>Chats List</h3>
+            <h3>I need Help with:</h3>
             <hr />
             <br />
+
+            <div class="search-container" style="padding-left:600px">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -269,4 +297,3 @@
 
 </body>
 </html>
-

@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-          <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
+
     <style>
         body {
             margin: 0;
@@ -179,11 +179,11 @@
     <div class="header" id="myHeader">
         <span style="font-size:30px;position: absolute; left: 20px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span>
         <h2 style='display: inline;'><b>My Workspace</b></h2>
-        <span style="position:absolute; right: 120px; bottom: 605px"><a href="staff_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
-        
-       <div class="dropdown">
+        <span style="position:absolute; right: 160px; bottom: 605px"><a href="student_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
+
+        <div class="dropdown">
             <button class="dropbtn">
-                John Doe
+                Rachel Johnson
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
@@ -194,16 +194,16 @@
         </div>
 
     </div>
-   
+
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <br />
         <br />
 
-        <a href="staff_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
-        <a href="staff_workspace_group.html"><i class="fa fa-users"></i> Contacts</a>
-        <a href="staff_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
+        <a href="student_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
+        <a href="student_workspace_group.html"><i class="fa fa-users"></i> Groups</a>
+        <a href="student_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
         <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
         <br />
         <br />
@@ -221,32 +221,16 @@
         <br />
         <br />
         <br />
-        <a href="staff_help.html"><i class="fa fa-question-circle"></i> Help</a>
+        <a href="student_help.html"><i class="fa fa-question-circle"></i> Help</a>
     </div>
 
 
 
     <div id="main" sstyle="background: rgba(208, 240, 192, 0.65);">
         <div id="containdiv">
-            <h3>Sessions</h3>
+            <h3>Chats List</h3>
             <hr />
             <br />
-
-            <h4 style="color:blue; padding-left:150px; padding-top:30px">Your Active Lessons</h4>
-            <h6 style="color:black; padding-left:200px"><a href="session_activity.html">>> INFS1602-Digital Transformation in Business </a></h6>
-            
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <h4 style="color:blue; padding-left:150px">Your Inactive Lessons</h4>
         </div>
     </div>
 
@@ -285,3 +269,4 @@
 
 </body>
 </html>
+

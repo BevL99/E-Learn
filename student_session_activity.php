@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -168,20 +168,17 @@
             margin-right: 15px;
         }
 
-       
+
 
         .videocontainer {
             width: 55%;
-            
             background: none;
         }
 
         .chatcontainer {
-            
             width: 45%;
             height: 100px;
         }
-
     </style>
 </head>
 <body>
@@ -194,11 +191,11 @@
     <div class="header" id="myHeader">
         <span style="font-size:30px;position: absolute; left: 20px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span>
         <h2 style='display: inline;'><b>My Workspace</b></h2>
-        <span style="position:absolute; right: 120px; bottom: 605px"><a href="staff_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
+        <span style="position:absolute; right: 160px; bottom: 605px"><a href="student_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
 
         <div class="dropdown">
             <button class="dropbtn">
-                John Doe
+                Rachel Johnson
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
@@ -216,9 +213,9 @@
         <br />
         <br />
 
-        <a href="staff_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
-        <a href="staff_workspace_group.html"><i class="fa fa-users"></i> Contacts</a>
-        <a href="staff_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
+        <a href="student_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
+        <a href="student_workspace_group.html"><i class="fa fa-users"></i> Contacts</a>
+        <a href="student_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
         <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
         <br />
         <br />
@@ -236,7 +233,7 @@
         <br />
         <br />
         <br />
-        <a href="staff_help.html"><i class="fa fa-question-circle"></i> Help</a>
+        <a href="student_help.html"><i class="fa fa-question-circle"></i> Help</a>
     </div>
 
 
@@ -247,28 +244,28 @@
             <hr />
             <br />
 
-            
-                <div class="videocontainer">
-                    <h2 style="text-align:center">INFS1602</h2>
-                    <p style="text-align:center">Welcome to the active session for INFS1602</p>
-                    <h3>Workshop Video</h3>
-                    <iframe width="760" height="527"
-                            src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="chatcontainer">
+
+            <div class="videocontainer">
+                <h2 style="text-align:center">INFS3617</h2>
+                <p style="text-align:center">Welcome to the active session for INFS3617</p>
+                <h3>Workshop Video</h3>
+                <iframe width="760" height="527"
+                        src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="chatcontainer">
+                <div>
+                    <h3>Workshop Quiz</h3>
                     <div>
-                        <h3>Workshop Quiz</h3>
-                        <div>
-                            Due 1 Hour After Workshop End
-                        </div>
+                        Due 1 Hour After Workshop End
                     </div>
                 </div>
-            <p style="text-align:center">Click <u> HERE</u> to enter live-stream mode</p>
             </div>
+            <p style="text-align:center">Click <u> HERE</u> to enter live-stream mode</p>
         </div>
+    </div>
 
-                <script>
+    <script>
                     window.onscroll = function () { myFunction() };
 
                     var header = document.getElementById("myHeader");
@@ -298,7 +295,7 @@
                         document.body.style.backgroundColor = "white";
 
                     }
-                </script>
+    </script>
 
 
 </body>

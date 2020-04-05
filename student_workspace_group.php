@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -167,18 +167,6 @@
             margin-left: 20px;
             margin-right: 15px;
         }
-
-
-
-        .videocontainer {
-            width: 55%;
-            background: none;
-        }
-
-        .chatcontainer {
-            width: 45%;
-            height: 100px;
-        }
     </style>
 </head>
 <body>
@@ -214,7 +202,7 @@
         <br />
 
         <a href="student_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
-        <a href="student_workspace_group.html"><i class="fa fa-users"></i> Contacts</a>
+        <a href="student_workspace_group.html"><i class="fa fa-users"></i> Groups</a>
         <a href="student_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
         <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
         <br />
@@ -238,63 +226,44 @@
 
 
 
-    <div id="main">
+    <div id="main" sstyle="background: rgba(208, 240, 192, 0.65);">
         <div id="containdiv">
-            <h3>Sessions</h3>
+            <h3>My Contacts</h3>
             <hr />
             <br />
-
-
-            <div class="videocontainer">
-                <h2 style="text-align:center">INFS3617</h2>
-                <p style="text-align:center">Welcome to the active session for INFS3617</p>
-                <h3>Workshop Video</h3>
-                <iframe width="760" height="527"
-                        src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
-            <div class="chatcontainer">
-                <div>
-                    <h3>Workshop Quiz</h3>
-                    <div>
-                        Due 1 Hour After Workshop End
-                    </div>
-                </div>
-            </div>
-            <p style="text-align:center">Click <u> HERE</u> to enter live-stream mode</p>
         </div>
     </div>
 
     <script>
-                    window.onscroll = function () { myFunction() };
+        window.onscroll = function () { myFunction() };
 
-                    var header = document.getElementById("myHeader");
-                    var sticky = header.offsetTop;
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
 
-                    function myFunction() {
-                        if (window.pageYOffset > sticky) {
-                            header.classList.add("sticky");
-                        } else {
-                            header.classList.remove("sticky");
-                        }
-                    }
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
 
-                    function openNav() {
-                        document.getElementById("mySidenav").style.width = "300px";
-                        document.getElementById("main").style.marginLeft = "300px";
-
-
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "300px";
+            document.getElementById("main").style.marginLeft = "300px";
 
 
 
-                    }
 
-                    function closeNav() {
-                        document.getElementById("mySidenav").style.width = "0";
-                        document.getElementById("main").style.marginLeft = "0";
-                        document.body.style.backgroundColor = "white";
 
-                    }
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+
+        }
     </script>
 
 

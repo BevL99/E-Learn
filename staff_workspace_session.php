@@ -1,8 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+          <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
+    
     <style>
         body {
             margin: 0;
@@ -69,59 +71,6 @@
                 margin-left: 50px;
             }
 
-        #main {
-            transition: margin-left .5s;
-            padding: 16px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-                .sidenav a {
-                    font-size: 18px;
-                }
-        }
-
-
-        .summaryitems {
-            height: 220px;
-            color: rgb(0,0,0);
-            margin-left: 15px;
-            margin-right: 20px;
-            text-align: left;
-        }
-
-        .containdiv {
-            display: flex;
-            margin-top: 10px;
-            
-        }
-
-        .left {
-            height: 100vh;
-            margin-bottom: 20px;
-            background-color: white;
-            margin-left: 15px;
-            flex-grow: 1;
-        }
-
-        .right {
-            height: 130vh;
-            margin-bottom: 20px;
-            margin-right: 10px;
-            background: rgba(208, 240, 192, 0.65);
-        }
-
-        .courses {
-            height: 250px;
-            
-            color: rgb(0,0,0);
-            margin-left: 20px;
-            margin-right: 30px;
-        }
-
         .dropdown {
             float: right;
             overflow: hidden;
@@ -164,6 +113,60 @@
             display: block;
         }
 
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+                .sidenav a {
+                    font-size: 18px;
+                }
+        }
+
+
+        .summaryitems {
+            height: 220px;
+            color: rgb(0,0,0);
+            margin-left: 15px;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        .containdiv {
+            height: 500px;
+            flex-grow: 1;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            background: rgba(208, 240, 192, 0.65);
+        }
+
+        .left {
+            height: 100vh;
+            margin-bottom: 20px;
+            background-color: white;
+            margin-left: 15px;
+            flex-grow: 1;
+        }
+
+        .right {
+            height: 100vh;
+            margin-bottom: 20px;
+            margin-right: 15px;
+            flex-grow: 1;
+        }
+
+        .courses {
+            height: 100px;
+            background: #ffffff;
+            color: rgb(0,0,0);
+            margin-left: 20px;
+            margin-right: 15px;
+        }
     </style>
 </head>
 <body>
@@ -175,10 +178,10 @@
 
     <div class="header" id="myHeader">
         <span style="font-size:30px;position: absolute; left: 20px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span>
-        <h2 style='display: inline;'><b>INFS1602-Digital Transformation in Business_2020 T1</b></h2>
+        <h2 style='display: inline;'><b>My Workspace</b></h2>
         <span style="position:absolute; right: 120px; bottom: 605px"><a href="staff_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
-
-        <div class="dropdown">
+        
+       <div class="dropdown">
             <button class="dropbtn">
                 John Doe
                 <i class="fa fa-caret-down"></i>
@@ -191,18 +194,17 @@
         </div>
 
     </div>
+   
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <br />
         <br />
 
-        <a href="staff_home_pg.html"><i class="fa fa-home"></i> Home</a>
-        <a href="#"><i class="fa fa-comments"></i> Sessions</a>
-        <a href="#"><i class="fa fa-users"></i> Groups</a>
-        <a href="#"><i class="fa fa-address-book"></i> Contacts</a>
-        <a href="#"><i class="fa fa-user-circle"></i> My Profile</a>
-        <a href="#"><i class="fa fa-sign-out"></i> Log out</a>
+        <a href="staff_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
+        <a href="staff_workspace_group.html"><i class="fa fa-users"></i> Contacts</a>
+        <a href="staff_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
+        <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
         <br />
         <br />
         <br />
@@ -219,71 +221,33 @@
         <br />
         <br />
         <br />
-        <a href="#"><i class="fa fa-question-circle"></i> Help</a>
+        <a href="staff_help.html"><i class="fa fa-question-circle"></i> Help</a>
     </div>
 
 
 
-    <div id="main">
-        <div class="containdiv">
+    <div id="main" sstyle="background: rgba(208, 240, 192, 0.65);">
+        <div id="containdiv">
+            <h3>Sessions</h3>
+            <hr />
+            <br />
+
+            <h4 style="color:blue; padding-left:150px; padding-top:30px">Your Active Lessons</h4>
+            <h6 style="color:black; padding-left:200px"><a href="session_activity.html">>> INFS1602-Digital Transformation in Business </a></h6>
             
 
-
-            <div class="left">
-                <p style="color:blue">My Courses > INFS1602-5203_01810</p>
-                <h2> Your NEXT workshop is coming this Friday, 03/04/20 </h2><hr width="95%" />
-                <svg width="" height="400">
-                    <rect width="900" height="400" x=10% y=3% style="fill:lightslategrey;stroke-width:3;" />
-
-                </svg>
-                <h5 style="text-align:right;padding-right:95px;color:blue"><u>Click here to Upload/Edit recording</u></h5>
-
-                <h3><b>Week 7 Learning Objectives:</b></h3>
-                <p>-</p>
-                <p>-</p>
-                <p>-</p>
-                <p>-</p>
-            </div>
-
-            <div class="right">
-                <h5 style="padding-left: 15px">Past Workshops</h5>
-                <section class="courses">
-                    <h4 style="padding-left: 5px;padding-top:5px; text-align:center"> Week 6: XXXXXX </h4>
-
-                    <p>Accor. study; #xxxxx</p>
-                    <svg width="">
-                        <rect width="700" height="200" x=3% y=0% style="fill:lightslategrey;stroke-width:3;" />
-
-                    </svg>
-
-                </section>
-
-                <section class="courses">
-                    <h4 style="padding-left: 5px;padding-top:5px; text-align:center">Week 5: XXXXXX</h4>
-                    <p>Accor. study; #xxxxx</p>
-                    <svg width="">
-                        <rect width="700" height="200" x=3% y=0% style="fill:lightslategrey;stroke-width:3;" />
-
-                    </svg>
-
-
-                </section>
-
-                <section class="courses">
-                    <h4 style="padding-left: 5px;padding-top:5px;text-align:center">Week 4: XXXXXX</h4>
-                    <p>Accor. study; #xxxxx</p>
-                    <svg width="">
-                        <rect width="700" height="200" x=3% y=0% style="fill:lightslategrey;stroke-width:3;" />
-
-                    </svg>
-                </section>
-
-            </div>
-
-
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h4 style="color:blue; padding-left:150px">Your Inactive Lessons</h4>
         </div>
-
-
     </div>
 
     <script>
