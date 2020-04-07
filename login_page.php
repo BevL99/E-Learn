@@ -4,7 +4,7 @@ error_reporting(0);
 
 if(isset($_POST['submit'])){
     
-    $db = mysqli_connect('localhost','root','','infs3605')
+    $db = mysqli_connect('192.168.1.189','root','','infs3605')
  or die('Error connecting to MySQL server.');
 
     $username = $_POST['uid'];
@@ -32,85 +32,7 @@ if(isset($_POST['submit'])){
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
-<style>
-        form {
-        border: none;
-        align-content: center;
-        }
-
-        input[type=text], input[type=password] {
-        width: 300px;
-        padding: 10px 20px;
-        margin: 8px 0;
-        display: list-item;
-        border: 1px solid rgb(198, 250, 177);
-        }
-
-        button {
-        background-color: rgb(73, 206, 46);
-        color: white;
-        padding: 14px 20px;
-        margin: 10px 0;
-        border: none;
-        cursor: pointer;
-        width: 300px;
-        display: list-item;
-        }
-        
-        button:hover{
-        opacity:0.8
-        }
-
-        .imgcontainer {
-        text-align: center;
-        width: 400px;
-        height: 250px;
-        margin: auto;
-        padding: 10px 30px;
-        background-color: rgba(255, 255, 255, 0.6);
-        }
-
-        img.avatar {
-        width: 50%;
-        }
-
-        .lgncontainer {
-        padding: 10px 30px;
-        width: 400px;
-        height: 500px;
-        margin: auto;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.6);
-        align-content: center;
-        }
-
-        span.psw {
-        float: right;
-        padding-top: 16px;
-        }
-
-        hr.border{
-        border-top: 7px solid #bbb;
-        opacity: 60%;
-        border-radius: 5px;
-        }
-
-        header {
-        text-align: center;
-        font-size: 35px;
-        font-weight: bold;
-        height: 40px;
-        padding: 10px;
-        color: rgb(0, 0, 0);
-        }
-        .button {
-        text-align: center;
-        position: relative;
-        top: 50%;
-        left: 12%;
-    }
-</style>
-    
+  
 </head>
 <body style="background-image: url('lgn_bkgnd.png')">
 
