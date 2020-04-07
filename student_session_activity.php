@@ -1,301 +1,149 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Live Session</title>
+    <link rel="stylesheet" href="styles.css">    
+    <!--Link for the Icons-->
     <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .top-container {
-            background-color: #ffffff;
-            padding: 10px;
-        }
-
-        .header {
-            padding: 10px;
-            text-align: center;
-            background: rgb(73, 206, 46);
-            color: #f1f1f1;
-        }
-
-        .content {
-            padding: 16px;
-        }
-
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-
-            .sticky + .content {
-                padding-top: 102px;
-            }
-
-        .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #043927;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-
-            .sidenav a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                font-size: 25px;
-                color: #818181;
-                display: block;
-                transition: 0.3s;
-            }
-
-                .sidenav a:hover {
-                    color: #f1f1f1;
-                }
-
-            .sidenav .closebtn {
-                position: absolute;
-                top: 0;
-                right: 25px;
-                font-size: 36px;
-                margin-left: 50px;
-            }
-
-        .dropdown {
-            float: right;
-            overflow: hidden;
-        }
-
-            .dropdown .dropbtn {
-                font-size: 16px;
-                border: none;
-                outline: none;
-                color: white;
-                padding: 14px 16px;
-                background-color: inherit;
-                font-family: inherit;
-                margin: 0;
-            }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-            .dropdown-content a {
-                float: none;
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
-
-                .dropdown-content a:hover {
-                    background-color: #ddd;
-                }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        #main {
-            transition: margin-left .5s;
-            padding: 16px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-                .sidenav a {
-                    font-size: 18px;
-                }
-        }
-
-
-        .summaryitems {
-            height: 220px;
-            color: rgb(0,0,0);
-            margin-left: 15px;
-            margin-right: 20px;
-            text-align: left;
-        }
-
-        .containdiv {
-            height: 500px;
-            flex-grow: 1;
-            margin-bottom: 20px;
-            margin-top: 5px;
-            background: rgba(208, 240, 192, 0.65);
-        }
-
-        .left {
-            height: 100vh;
-            margin-bottom: 20px;
-            background-color: white;
-            margin-left: 15px;
-            flex-grow: 1;
-        }
-
-        .right {
-            height: 100vh;
-            margin-bottom: 20px;
-            margin-right: 15px;
-            flex-grow: 1;
-        }
-
-        .courses {
-            height: 100px;
-            background: #ffffff;
-            color: rgb(0,0,0);
-            margin-left: 20px;
-            margin-right: 15px;
-        }
-
-
-
-        .videocontainer {
-            width: 55%;
-            background: none;
-        }
-
-        .chatcontainer {
-            width: 45%;
-            height: 100px;
-        }
-    </style>
 </head>
+
+<style>
+    .wrapper .containdiv .videocontainer{
+        width:100%;
+        background:none;
+        padding-right: 10px;
+    }
+
+    .wrapper .containdiv{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top:60px;
+    }
+
+    .wrapper .containdiv .videocontainer .videowrapper{
+        position: relative;
+        padding-bottom: 56.25%;
+    }
+    
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wrapper .containdiv .interactcontainer{
+        background:red;
+        width:350px;
+        margin:0px;
+        height:calc(100%-60px);
+    }
+    
+    .wrapper .containdiv .interactcontainer .interactoptions{
+        width:350px;
+        height: 50px;
+        bottom:0px;
+        right:10px;
+        position:absolute;
+        background:white;
+        border:dotted;
+    }
+
+    .wrapper .containdiv .interactcontainer .interactoptions .option{
+        width:175px;
+        height:50px;
+        bottom:0px;
+        margin:0px;
+        position:absolute;
+        border:solid;
+        border-color: blue;
+        display:inline-block;
+    }
+
+    .wrapper .containdiv .interactcontainer .interactoptions .option ul li a{
+        display: block;
+        color: #fff;
+        position: relative;
+        margin-bottom: 1px;
+        color: rgb(81,81,206);
+        white-space: nowrap;
+        align-content: center;
+    }
+
+    .wrapper .containdiv .interactcontainer .interactoptions .option ul li a span.icon{
+        margin:0px;
+        text-align: center;
+        display: block;
+    }
+
+    .wrapper .containdiv .interactcontainer .interactoptions .option ul li a span.title{
+        margin:0px;
+        text-align: center;
+        display:block;
+    }
+
+</style>
+
 <body>
 
-    <div class="top-container">
-
-        <img src="UNSW logo.png" alt="logo" class="logo" height="50" width="130">
-    </div>
-
-    <div class="header" id="myHeader">
-        <span style="font-size:30px;position: absolute; left: 20px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span>
-        <h2 style='display: inline;'><b>My Workspace</b></h2>
-        <span style="position:absolute; right: 160px; bottom: 605px"><a href="student_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
-
-        <div class="dropdown">
-            <button class="dropbtn">
-                Rachel Johnson
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">My Profile</a>
-                <a href="#">Preferences</a>
-                <a href="#">Settings</a>
-            </div>
+<div class="wrapper">
+    <div class="top_navbar">
+        <div class="hamburger">
+                <li><a href="student_workspace_session.php">
+                <i class ="fas fa-arrow-left"></i></a>
+            </li>        
         </div>
-
+        <div class="top_menu">
+            <div class="logo">Live Session</div>
+            <ul>
+                <li><a href="student_home_pg.php">
+                    <i class="fas fa-home"></i></a></li>
+                <li><a href="#">
+                    <i class="fas fa-cog"></i></a></li>
+                <li><a href="#">
+                    <i class="far fa-user"></i></a></li>
+            </ul>
+        </div>
     </div>
 
+    <div class="containdiv">
 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <br />
-        <br />
-
-        <a href="student_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
-        <a href="student_workspace_group.html"><i class="fa fa-users"></i> Contacts</a>
-        <a href="student_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
-        <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <a href="student_help.html"><i class="fa fa-question-circle"></i> Help</a>
-    </div>
-
-
-
-    <div id="main">
-        <div id="containdiv">
-            <h3>Sessions</h3>
-            <hr />
-            <br />
-
-
-            <div class="videocontainer">
-                <h2 style="text-align:center">INFS3617</h2>
-                <p style="text-align:center">Welcome to the active session for INFS3617</p>
-                <h3>Workshop Video</h3>
-                <iframe width="760" height="527"
-                        src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        <div class="videocontainer">
+            <h2>Welcome to the active session for Course Name</h2>
+            <div class="videowrapper">
+                <iframe width="100%" height="100%" 
+                src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
-            <div class="chatcontainer">
+        </div>
+        <div class="interactcontainer">
+            <div><h3>Workshop Quiz</h3>
                 <div>
-                    <h3>Workshop Quiz</h3>
-                    <div>
-                        Due 1 Hour After Workshop End
-                    </div>
+                    Due 1 Hour After Workshop End
+                    <!--WHERE THE QUIZ API SHOULD GO-->
+                    <p>My idea is that the quiz has to be on the same page as workshop instead of under assessments page</p>
                 </div>
             </div>
-            <p style="text-align:center">Click <u> HERE</u> to enter live-stream mode</p>
+            <div class="interactoptions">
+                <div class="option">
+                    <ul>
+                        <li><a href="student_workspace_session.php">
+                            <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                            <span class="title">Chat</span></a></li>
+                    </ul>
+                </div>
+                <div class="option">
+                    <ul>
+                    <li><a href="student_workspace_group.php">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <span class="title">Quiz</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
-
-    <script>
-                    window.onscroll = function () { myFunction() };
-
-                    var header = document.getElementById("myHeader");
-                    var sticky = header.offsetTop;
-
-                    function myFunction() {
-                        if (window.pageYOffset > sticky) {
-                            header.classList.add("sticky");
-                        } else {
-                            header.classList.remove("sticky");
-                        }
-                    }
-
-                    function openNav() {
-                        document.getElementById("mySidenav").style.width = "300px";
-                        document.getElementById("main").style.marginLeft = "300px";
-
-
-
-
-
-                    }
-
-                    function closeNav() {
-                        document.getElementById("mySidenav").style.width = "0";
-                        document.getElementById("main").style.marginLeft = "0";
-                        document.body.style.backgroundColor = "white";
-
-                    }
-    </script>
+</div>
 
 
 </body>

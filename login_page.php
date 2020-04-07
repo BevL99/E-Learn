@@ -4,8 +4,8 @@ error_reporting(0);
 
 if(isset($_POST['submit'])){
     
-    $db = mysqli_connect('192.168.1.189','root','','infs3605')
- or die('Error connecting to MySQL server.');
+    $db = mysqli_connect('192.168.1.189','Infs_data','Infs2020!')
+    or die('Error connecting to MySQL server.');
 
     $username = $_POST['uid'];
     $password = $_POST['psw'];
@@ -82,12 +82,12 @@ if(isset($_POST['submit'])){
 
                 <button type="submit" class="button" id="submit" name="submit" >Agree and sign on as Student</button>
 
-                <button type="submit" class="button" formaction="staff_home_pg.html">Agree and sign on as Staff</button>
+                <button type="submit" class="button" formaction="staff_home_pg.php">Agree and sign on as Staff</button>
                 
             </div>
 
             <span class="psw">
-                <a href="forgot_pw_pg.html">Forgot password?</a>
+                <a href="forgot_pw_pg.php">Forgot password?</a>
             </span>
             
         </form>
