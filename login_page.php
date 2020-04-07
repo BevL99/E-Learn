@@ -4,8 +4,8 @@ error_reporting(0);
 
 if(isset($_POST['submit'])){
     
-    $db = mysqli_connect('192.168.1.189','Infs_data','Infs2020!')
-    or die('Error connecting to MySQL server.');
+    $db = mysqli_connect('localhost','root','','infs3605')
+ or die('Error connecting to MySQL server.');
 
     $username = $_POST['uid'];
     $password = $_POST['psw'];
@@ -58,8 +58,6 @@ if(isset($_POST['submit_btn'])){
 mysqli_close($db);
 ?>
 
-
-<!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
@@ -67,20 +65,37 @@ mysqli_close($db);
   
 </head>
 
+<style>
+    h2{
+        padding:10px;
+    }
+
+    .banner{
+        border-bottom: 10px solid #0E4D92;
+    }
+
+    .bdcontainer {        
+        padding: 50px 0;
+        width: 100%-10px;
+        height:100%;
+        margin: auto;
+        border: none;
+        background-image: url('login_bg.png');
+        align-content: center;
+    }
+</style>
+
 <div class="banner">
     
-    <img src="unsw_elearn_blk.jpg" style="width:40%; height:40%"/>
+    <img src="unsw_elearn_blk.jpg" style="height:60px"/>
 </div>
 
 
 
-<body class="bg" style="margin-top: 5px">
+<body class="bg" style="margin-top: 5px; margin-left:10px; margin-right:10px;">
     
-    <div class="bg"></div> 
+    <div class="bdcontainer">
 
-   <div class="bdcontainer">
-
-    
 
     <div class="lgncontainer">
         <form method="post">
