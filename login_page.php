@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 error_reporting(0);
 
 if(isset($_POST['submit'])){
@@ -20,80 +20,95 @@ if(isset($_POST['submit'])){
 
 	if ($row['STUDENT_ID'] == $username && $row['STUDENT_PASSWORD'] == $password){
         $success="Login Successful";
+        $_SESSION['uid'] = $username;
+        $_SESSION['psw'] = $password;
         header("Location: student_home_pg.php");
     }
     else{
         $error="Invalid Username or Password! ";
 	}
 }
+
+if(isset($_POST['submit_btn'])){
+
+    $db = mysqli_connect('localhost','root','','infs3605')
+ or die('Error connecting to MySQL server.');
+
+    $username = $_POST['uid'];
+    $password = $_POST['psw'];
+    $error = "";
+    $success = "";
+
+    $query = "SELECT * FROM STAFF WHERE STAFF_ID = '$username' AND STAFF_PASSWORD = '$password'";
+    mysqli_query($db, $query) or die('Error querying database.');
+
+    $result = mysqli_query($db, $query);
+	$row = mysqli_fetch_array($result);
+
+	if ($row['STAFF_ID'] == $username && $row['STAFF_PASSWORD'] == $password){
+        $success="Login Successful";
+        $_SESSION['uid'] = $username;
+        $_SESSION['psw'] = $password;
+        header("Location: staff_home_pg.php");
+    }
+    else{
+        $error="Invalid Username or Password! ";
+	}
+}
+mysqli_close($db);
 ?>
 
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
   
 </head>
-<body style="background-image: url('lgn_bkgnd.png')">
 
-   
+<div class="banner">
+    
+    <img src="unsw_elearn_blk.jpg" style="width:40%; height:40%"/>
+</div>
 
-    <div class="imgcontainer">
-        <img src="Unswuni.png" alt="Avatar" class="avatar"
-             style='height: 100%; width: 100%; object-fit: contain'>
-    </div>
+
+
+<body class="bg" style="margin-top: 5px">
+    
+    <div class="bg"></div> 
+
+   <div class="bdcontainer">
+
+    
 
     <div class="lgncontainer">
-        
         <form method="post">
+            <body style="width: 100px">
+                <h2 align="center"> <font size="8">Sign On</font></h2>
 
-            <h2 align="center">
-                <font size="8">E-Learn Sign On</font>
-            </h2>
-
-            <label for="uid">
-                <b>USER ID</b>
-            </label>
-            <input type="text" placeholder="Enter your zID" id="uid" name="uid" required />
-
-            <br />
-
-            <label for="psw">
-                <b>PASSWORD</b>
-            </label>
-            <input type="password" placeholder="Enter your password" id="psw" name="psw" required />
-
-           
-
-            <p class="error" align="center" style="color:red">
-                <?php echo $error; ?>
-            </p>
-           
-
-            <p align="center">
-
-                <font size="2">
-                    I agree to the
-                    <b>Terms & Conditions</b> of using UNSW ICT resources as set out in the policy and procedures.
-                </font>
-            </p>
-
-            <div class="btncontainer">
-
-                <button type="submit" class="button" id="submit" name="submit" >Agree and sign on as Student</button>
-
-                <button type="submit" class="button" formaction="staff_home_pg.php">Agree and sign on as Staff</button>
+                <label for="uid"><b>USER ID</b></label>
+                <input type="text" placeholder="Enter your zID" name="uid" required>
+                <br />
+                <label for="psw"><b>PASSWORD</b></label>
+                <input type="password" placeholder="Enter your password" name="psw" required>
                 
-            </div>
+                 <p class="error" align="center" style="color:red">
+                <?php echo $error; ?>
+                 </p>
 
-            <span class="psw">
-                <a href="forgot_pw_pg.php">Forgot password?</a>
-            </span>
-            
+                <p align="center"> <font size="2">I agree to the <b>Terms & Conditions</b> of using UNSW ICT resources as set out in the policy and procedures.</font></p>
+                
+                <div class="btncontainer">
+                    
+                    <button type="submit" class="button" id="submit" name="submit">Agree and sign on as Student</button>
+
+                    <button type="submit" class="button" id="submit_btn" name="submit_btn">Agree and sign on as Staff</button>
+                    
+                </div>
+                <span class="psw"> <a href="forgot_pw_pg.html">Forgot password?</a></span>
         </form>
     </div>
-    
-    
-
+</div>
 </body>
 </html>
