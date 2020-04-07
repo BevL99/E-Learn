@@ -194,7 +194,7 @@
     <div class="header" id="myHeader">
         <span style="font-size:30px;position: absolute; left: 20px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span>
         <h2 style='display: inline;'><b>My Workspace</b></h2>
-        <span style="position:absolute; right: 120px; bottom: 605px"><a href="staff_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
+        <span style="position:absolute; right: 120px; bottom: 605px"><a href="staff_home_pg.php"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
 
         <div class="dropdown">
             <button class="dropbtn">
@@ -216,10 +216,10 @@
         <br />
         <br />
 
-        <a href="staff_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
-        <a href="staff_workspace_group.html"><i class="fa fa-users"></i> Contacts</a>
-        <a href="staff_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
-        <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
+        <a href="staff_workspace_session.php"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
+        <a href="staff_workspace_group.php"><i class="fa fa-users"></i> Contacts</a>
+        <a href="staff_workspace_chat.php"><i class="fa fa-comments"></i> Chat</a>
+        <a href="login_page.php"><i class="fa fa-sign-out"></i> Log out</a>
         <br />
         <br />
         <br />
@@ -236,7 +236,7 @@
         <br />
         <br />
         <br />
-        <a href="staff_help.html"><i class="fa fa-question-circle"></i> Help</a>
+        <a href="staff_help.php"><i class="fa fa-question-circle"></i> Help</a>
     </div>
 
 

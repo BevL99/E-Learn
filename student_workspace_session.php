@@ -40,6 +40,8 @@
                     <i class="fas fa-cog"></i></a></li>
                 <li><a href="#">
                     <i class="far fa-user"></i></a></li>
+                <li><a href="login_page.php">
+                    <i class="fas fa-sign-out-alt"></i></a></li>
             </ul>
         </div>
     </div>
