@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>Live Session</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">    
     <!--Link for the Icons-->
     <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
@@ -104,6 +105,9 @@
         align-content: center;
     }
 
+    .wrapper .top_navbar .top_menu ul li a{
+        padding-top:8px;}
+
     .containdiv .interactcontainer .interactoptions .option ul li a:hover,
     .containdiv .interactcontainer .interactoptions .option ul li a.active{
         background: rgb(81,81,206);
@@ -170,6 +174,7 @@
         height:35px;
         padding: 12px 16px;
         margin: auto;
+        margin-top:2px;
         box-sizing: border-box;
         display:inline-block;
     }
@@ -179,10 +184,25 @@
         width:35px;
         height:35px;
         background:whitesmoke;
+        text-align: center;
+        align-content: center;
     }
 
     .send:hover{
         cursor:pointer;
+    }
+
+    .sendb{
+        background-color: lightblue;
+        width:35px;
+        height:35px;
+        align-content: center;
+    }
+    .sendb li a{
+        color: #fff;
+        position: absolute;
+        color: rgb(81,81,206);
+        margin:auto;
     }
 
     .containdiv .interactcontainer .interactcontent .quizcontainer{
@@ -204,7 +224,6 @@
         border-width:1px;        
         background:whitesmoke;
     }
-
 </style>
 
 <body>
@@ -250,10 +269,12 @@
                     </section>
                     <section class="chatinput">
                         <input type="text" id="msg" placeholder="Type Your Message">
-                        <div class="send" >
-                            <li><a>
-                            <span class="icon"><i class="fas fa-chalkboard-teacher" onclick="insertMsg(event)"></i></span>
+                        <div class="send">
+                            <button class="sendb" onclick="insertMsg(event)">
+                                <li><a>
+                                <span class="icon"><i class="fas fa-envelope""></i></span>
                             </a></li>
+                            </button>
                         </div>
                     </section>
                 </section>

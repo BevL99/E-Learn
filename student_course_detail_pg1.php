@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Course Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">    
     <!--Link for the Icons-->
     <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>

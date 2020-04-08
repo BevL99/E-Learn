@@ -2,12 +2,19 @@
 <html>
 <head>
     <title>Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">    
     <!--Link for the Icons-->
     <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
 
     <style>
-        
+        .containdiv{
+            margin-left:150px;
+        }
+
+        .search_container{
+            display:block;
+        }
     </style>
 </head>
 
@@ -21,7 +28,7 @@
             </li>        
         </div>
         <div class="top_menu">
-            <div class="logo">Chat</div>
+            <div class="logo">Help</div>
             <ul>
                 <li><a href="student_home_pg.php">
                     <i class="fas fa-home"></i></a></li>
@@ -46,20 +53,20 @@
             <li><a href="student_workspace_chat.php">
                 <span class="icon"><i class="fas fa-comments"></i></span>
                 <span class="title">Chat</span></a></li>
+            <li><a href="student_workspace_chat.php">
+                <span class="icon"><i class="fas fa-question"></i></span>
+                <span class="title">Help</span></a></li>
         </ul>
     </div>
 
     <div class="containdiv">
-        <h3>I need Help with:</h3>
-            <hr />
-            <br />
-
-            <div class="search-container" style="padding-left:600px">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
+        <div><h3>I need Help with:</h3></div>
+        <div class="search_container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
     </div>
 </div>
 

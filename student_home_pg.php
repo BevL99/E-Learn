@@ -3,6 +3,7 @@
 <html>
 <head>
         <title>Home Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
 </head>
