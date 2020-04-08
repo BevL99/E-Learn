@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: white;
+  height:100%;
 }
 
 /*Login Page CSS*/
@@ -154,8 +155,12 @@ body {
   
   .wrapper .top_navbar .hamburger li a{
     display: block;
-    margin: 22px 30px;
+    padding-left: 30px;
+    padding-top:20px;
+    cursor: pointer;
     color: white;
+    width: 80px;
+    height: 60px;
     }
 
   .wrapper .top_navbar .top_menu{
@@ -191,6 +196,10 @@ body {
   color: white;
   }
 
+  .wrapper .top_navbar .top_menu ul li a:hover{
+    cursor: pointer;
+  }
+
   .wrapper .sidebar{
     position: fixed;
     top: 65px;
@@ -204,10 +213,10 @@ body {
   .wrapper .sidebar ul li a{
       display: block;
       padding: 10px;
-      color: #fff;
+      color: #4360b5;
       position: relative;
       margin-bottom: 1px;
-      background: #92a6e2;
+      background: rgb(227, 228, 255);
       white-space: nowrap;
       align-content: center;
   }

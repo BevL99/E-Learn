@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
+<head>
         <title>Home Page</title>
         <link rel="stylesheet" href="styles.css">
         <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
@@ -90,7 +90,7 @@
         <div class="right">
             <section class = "courses">
                 <div class ="content">
-                <h4>INFS3605</h4>
+                <a href="student_course_detail_pg1.php" target="_blank"><h4>INFS3605</h4></a>
                 <p>
                 IS Innovation & Transformation
                 </p>

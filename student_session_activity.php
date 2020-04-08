@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Live Session</title>
@@ -7,26 +8,26 @@
 </head>
 
 <style>
-    .wrapper{
-        margin-right:0px;
-    }
     .containdiv{
         width:100%;
+        height:100%;
         padding-left: 5px;
-        padding-top:5px;
-        margin-right: 0px;
-        margin-top:60px;
+        padding-top:60px;
+        bottom:0;
+        display:block;
+        position: absolute;
     }
 
     .containdiv .videocontainer{
-        background:yellow;
-        padding-left: 10px;
-        padding-right:10px;
+        padding-top:80px;
+        padding-left: 5px;
+        padding-right:360px;
         padding-bottom: 10px;
         bottom:0;
         position:absolute;
-        padding-top:60px;
         height:100%;
+        width:100%;
+        display:block;
     }
 
     .containdiv .videocontainer .videowrapper{
@@ -42,54 +43,62 @@
         height: 100%;
     }
 
-    .containdiv .interactcontainer{
-        width:350px;
-        bottom:0;
+    .containdiv .interactcontainer{       
         right:0;
-        float:right;
-        margin-left:5px;
-        padding-top:65px;
-        padding-bottom:50px;
+        bottom:0;
+        padding-top:60px;
         position:absolute;
-        height:100%;
-        display:block;
+        width: 350px;
+        height: 100%;
+        display: block;
+    }
+
+    .containdiv .interactcontainer .contentheader{
+        height:35px;
+        width:350px;
+        right:0;
+        text-align: center;
+        border:solid;
+        border-color: lightgrey;
+        border-width:1px;
+        background:rgb(220,220,220);
     }
 
     .containdiv .interactcontainer .interactcontent{
-        height:100%;
-        width:350px;
-        background: whitesmoke;
-        display:none;
-        border:solid;
-        border-color:lightgrey;
-        flex:0 0 1px;
+        height: 100%;
+        width: 350px;
+        bottom:0;
+        padding-top:60px;
+        position:absolute;
+        display: flex;
+        flex: 0 0 1px;
     }
     
     .containdiv .interactcontainer .interactoptions{
         width:350px;
-        height:51px;
-        bottom:0px;
-        right:0px;
+        height:50px;
+        right:0;
+        bottom:0;
         position:absolute;
         background:whitesmoke;
-        display: inline-block;
+        display: block;
     }
 
     .containdiv .interactcontainer .interactoptions .option{
         width:172.5px;
-        height:48px;
-        border:solid;
+        height:50px;
         display: inline-block;
-        background: inherit;
-        color:lightgrey;
+        border:solid;
+        border-color: lightgrey;
+        border-width:1px;
     }
 
     .containdiv .interactcontainer .interactoptions .option ul li a{
         padding-top:7px;
         display: block;
+        height:49px;
         color: #fff;
         position: relative;
-        margin-bottom: 1px;
         color: rgb(81,81,206);
         white-space: nowrap;
         align-content: center;
@@ -113,13 +122,96 @@
         display:block;
     }
 
+    .containdiv .interactcontainer .interactcontent .chatcontainer{
+        height:100%;
+        width:100%;
+        bottom:0;
+        padding-top:145px;
+        margin-bottom:50px;
+        position:absolute;
+    }
+
+    .containdiv .interactcontainer .interactcontent .chatcontainer .chatcontent{
+        height:100%;
+        width:100%;
+        border:solid;
+        margin-bottom:50px;
+        border-color: lightgrey;
+        border-width:1px;        
+        background:whitesmoke;
+    }
+
+    .chatscroll{
+        height:100%;
+        padding-bottom:50px;
+        overflow-y:auto;
+    }
+
+    .containdiv .interactcontainer .interactcontent .chatcontainer .chatinput{
+        width:350px;
+        height:50px;
+        padding:5px;
+        bottom:0;
+        position:absolute;
+        border:solid;
+        border-color: lightgrey;
+        border-width:1px;
+        text-align: center;
+    }
+
+    .chatscroll{
+        background: whitesmoke;
+        color: black;
+    }
+
+
+    input[type=text] {
+        width: 250px;
+        height:35px;
+        padding: 12px 16px;
+        margin: auto;
+        box-sizing: border-box;
+        display:inline-block;
+    }
+
+    .send{
+        display:inline-block;
+        width:35px;
+        height:35px;
+        background:whitesmoke;
+    }
+
+    .send:hover{
+        cursor:pointer;
+    }
+
+    .containdiv .interactcontainer .interactcontent .quizcontainer{
+        height:100%;
+        width:100%;
+        bottom:0;
+        padding-top:145px;
+        margin-bottom:50px;
+        position:absolute;
+        
+    }
+
+    .containdiv .interactcontainer .interactcontent .quizcontainer .quizcontent{
+        height:100%;
+        width:100%;
+        border:solid;
+        margin-bottom:50px;
+        border-color: lightgrey;
+        border-width:1px;        
+        background:whitesmoke;
+    }
+
 </style>
 
 <body>
 <div class="wrapper">
     <div class="top_navbar">
         <div class="hamburger">
-                <li><a href="student_workspace_session.php">
+            <li><a href="student_workspace_session.php">
                 <i class ="fas fa-arrow-left"></i></a>
             </li>        
         </div>
@@ -131,7 +223,7 @@
                 <li><a href="#">
                     <i class="fas fa-cog"></i></a></li>
                 <li><a href="#">
-                    <i class="far fa-user"></i></a></li>                    
+                    <i class="far fa-user"></i></a></li>
                 <li><a href="login_page.php">
                     <i class="fas fa-sign-out-alt"></i></a></li>
             </ul>
@@ -141,7 +233,6 @@
     <div class="containdiv">
 
         <div class="videocontainer">
-            <h2>Welcome to the active session for Course Name</h2>
             <div class="videowrapper">
                 <iframe width="100%" height="100%" 
                 src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -150,22 +241,33 @@
         </div>
         <div class="interactcontainer">
             <div id="chat" class="interactcontent">
-                <div><h3>Chat</h3>
-                    <div>
-                        Due 1 Hour After Workshop End
-                        <!--WHERE THE QUIZ API SHOULD GO-->
-                        <p>My idea is that the quiz has to be on the same page as workshop instead of under assessments page</p>
-                    </div>
-                </div>
+                <header class="contentheader"><h2>Chat</h2></header>                
+                <section class="chatcontainer">
+                    <section class="chatcontent">
+                        <div class="chatscroll" id="chatmsg">
+                            <p>asdasda</p>
+                        </div>
+                    </section>
+                    <section class="chatinput">
+                        <input type="text" id="msg" placeholder="Type Your Message">
+                        <div class="send" >
+                            <li><a>
+                            <span class="icon"><i class="fas fa-chalkboard-teacher" onclick="insertMsg(event)"></i></span>
+                            </a></li>
+                        </div>
+                    </section>
+                </section>
             </div>
+
             <div id="quiz" class="interactcontent" style="display:none">
-                <div><h3>Workshop Quiz</h3>
-                    <div>
-                        Due 1 Hour After Workshop End
-                        <!--WHERE THE QUIZ API SHOULD GO-->
-                        <p>My idea is that the quiz has to be on the same page as workshop instead of under assessments page</p>
-                    </div>
-                </div>
+                <header class="contentheader"><h2>Workshop Quiz</h2></header>
+                <section class="quizcontainer">
+                    <section class="quizcontent">
+                    Due 1 Hour After Workshop End
+                    <!--WHERE THE QUIZ API SHOULD GO-->
+                    <p>My idea is that the quiz has to be on the same page as workshop instead of under assessments page</p>
+                    </section>
+                </section>
             </div>
             
             <div class="interactoptions">
@@ -178,9 +280,9 @@
                 </div>
                 <div class="option" onclick="openContent(event, 'quiz')">
                     <ul>
-                    <li><a>
-                        <span class="icon"><i class="fas fa-users"></i></span>
-                        <span class="title">Quiz</span></a></li>
+                        <li><a>
+                            <span class="icon"><i class="fas fa-users"></i></span>
+                            <span class="title">Quiz</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -191,7 +293,8 @@
 
 <script>
 
-    
+    document.getElementById("defaultOpen").click(); 
+
     function openContent(evt, contentTitle) {
         var i, interactContent, option;
         
@@ -208,7 +311,18 @@
         document.getElementById(contentTitle).style.display = "block";
         evt.currentTarget.className += " active";
     }
-    document.getElementById("defaultOpen").click();
+    
+
+    function insertMsg(evt){
+        var block_to_insert, chatBox;
+        
+        block_to_insert = document.createElement( 'div' );
+        block_to_insert.innerHTML = document.getElementById('msg').value;
+        
+        chatBox = document.getElementById(chatmsg);
+        chatBox.appendChild( block_to_insert );
+    }
+
 </script>
 
 </body>
