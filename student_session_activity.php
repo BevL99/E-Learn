@@ -6,7 +6,16 @@
     <link rel="stylesheet" href="styles.css">    
     <!--Link for the Icons-->
     <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
+    <!-- load api without page delay-->
+    <script>
+    (function(t,a,l,k,j,s){
+        s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s)
+        ;k=t.Promise;t.Talk={v:3,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
+        .push([f])},catch:function(){return k&&new k()},c:l}};})(window,document,[]);
+    </script>
 </head>
+
+
 
 <style>
     .containdiv{
@@ -58,11 +67,13 @@
         height:35px;
         width:350px;
         right:0;
+        padding-top:3px;
         text-align: center;
         border:solid;
+        border-radius:10px;
         border-color: lightgrey;
         border-width:1px;
-        background:rgb(220,220,220);
+        background:rgba(220,220,220,0.8);
     }
 
     .containdiv .interactcontainer .interactcontent{
@@ -130,79 +141,14 @@
         height:100%;
         width:100%;
         bottom:0;
-        padding-top:145px;
+        padding-top:150px;
         margin-bottom:50px;
         position:absolute;
-    }
-
-    .containdiv .interactcontainer .interactcontent .chatcontainer .chatcontent{
-        height:100%;
-        width:100%;
-        border:solid;
-        margin-bottom:50px;
-        border-color: lightgrey;
-        border-width:1px;        
-        background:whitesmoke;
-    }
-
-    .chatscroll{
-        height:100%;
-        padding-bottom:50px;
-        overflow-y:auto;
-    }
-
-    .containdiv .interactcontainer .interactcontent .chatcontainer .chatinput{
-        width:350px;
-        height:50px;
-        padding:5px;
-        bottom:0;
-        position:absolute;
-        border:solid;
-        border-color: lightgrey;
-        border-width:1px;
-        text-align: center;
     }
 
     .chatscroll{
         background: whitesmoke;
         color: black;
-    }
-
-
-    input[type=text] {
-        width: 250px;
-        height:35px;
-        padding: 12px 16px;
-        margin: auto;
-        margin-top:2px;
-        box-sizing: border-box;
-        display:inline-block;
-    }
-
-    .send{
-        display:inline-block;
-        width:35px;
-        height:35px;
-        background:whitesmoke;
-        text-align: center;
-        align-content: center;
-    }
-
-    .send:hover{
-        cursor:pointer;
-    }
-
-    .sendb{
-        background-color: lightblue;
-        width:35px;
-        height:35px;
-        align-content: center;
-    }
-    .sendb li a{
-        color: #fff;
-        position: absolute;
-        color: rgb(81,81,206);
-        margin:auto;
     }
 
     .containdiv .interactcontainer .interactcontent .quizcontainer{
@@ -262,21 +208,9 @@
             <div id="chat" class="interactcontent">
                 <header class="contentheader"><h2>Chat</h2></header>                
                 <section class="chatcontainer">
-                    <section class="chatcontent">
-                        <div class="chatscroll" id="chatmsg">
-                            <p>asdasda</p>
+                        <div class="chatscroll" id="chatbox">
+
                         </div>
-                    </section>
-                    <section class="chatinput">
-                        <input type="text" id="msg" placeholder="Type Your Message">
-                        <div class="send">
-                            <button class="sendb" onclick="insertMsg(event)">
-                                <li><a>
-                                <span class="icon"><i class="fas fa-envelope""></i></span>
-                            </a></li>
-                            </button>
-                        </div>
-                    </section>
                 </section>
             </div>
 
@@ -332,17 +266,38 @@
         document.getElementById(contentTitle).style.display = "block";
         evt.currentTarget.className += " active";
     }
-    
+</script>
 
-    function insertMsg(evt){
-        var block_to_insert, chatBox;
-        
-        block_to_insert = document.createElement( 'div' );
-        block_to_insert.innerHTML = document.getElementById('msg').value;
-        
-        chatBox = document.getElementById(chatmsg);
-        chatBox.appendChild( block_to_insert );
-    }
+<script>
+    Talk.ready.then(function() {
+    var me = new Talk.User({
+        id: "123456",
+        name: "Alice",
+        email: "alice@example.com",
+        photoUrl: "https://demo.talkjs.com/img/alice.jpg",
+        welcomeMessage: "Hey there! How are you? :-)"
+    });
+    window.talkSession = new Talk.Session({
+        appId: "tbYam5vB",
+        me: me
+    });
+    var other = new Talk.User({
+        id: "654321",
+        name: "Sebastian",
+        email: "Sebastian@example.com",
+        photoUrl: "https://demo.talkjs.com/img/sebastian.jpg",
+        welcomeMessage: "Hey, how can I help?"
+    });
+
+    var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
+    conversation.setParticipant(me);
+    conversation.setParticipant(other);
+    conversation.setAttributes({
+        subject: "Agile Scrum"
+    });
+    var inbox = talkSession.createInbox({selected: conversation});
+    inbox.mount(document.getElementById("chatbox"));
+});
 
 </script>
 
