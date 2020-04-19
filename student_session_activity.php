@@ -1,302 +1,339 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Live Session</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <!--Link for the Icons-->
     <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .top-container {
-            background-color: #ffffff;
-            padding: 10px;
-        }
-
-        .header {
-            padding: 10px;
-            text-align: center;
-            background: rgb(73, 206, 46);
-            color: #f1f1f1;
-        }
-
-        .content {
-            padding: 16px;
-        }
-
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-
-            .sticky + .content {
-                padding-top: 102px;
-            }
-
-        .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #043927;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-
-            .sidenav a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                font-size: 25px;
-                color: #818181;
-                display: block;
-                transition: 0.3s;
-            }
-
-                .sidenav a:hover {
-                    color: #f1f1f1;
-                }
-
-            .sidenav .closebtn {
-                position: absolute;
-                top: 0;
-                right: 25px;
-                font-size: 36px;
-                margin-left: 50px;
-            }
-
-        .dropdown {
-            float: right;
-            overflow: hidden;
-        }
-
-            .dropdown .dropbtn {
-                font-size: 16px;
-                border: none;
-                outline: none;
-                color: white;
-                padding: 14px 16px;
-                background-color: inherit;
-                font-family: inherit;
-                margin: 0;
-            }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-            .dropdown-content a {
-                float: none;
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
-
-                .dropdown-content a:hover {
-                    background-color: #ddd;
-                }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        #main {
-            transition: margin-left .5s;
-            padding: 16px;
-        }
-
-        @media screen and (max-height: 450px) {
-            .sidenav {
-                padding-top: 15px;
-            }
-
-                .sidenav a {
-                    font-size: 18px;
-                }
-        }
-
-
-        .summaryitems {
-            height: 220px;
-            color: rgb(0,0,0);
-            margin-left: 15px;
-            margin-right: 20px;
-            text-align: left;
-        }
-
-        .containdiv {
-            height: 500px;
-            flex-grow: 1;
-            margin-bottom: 20px;
-            margin-top: 5px;
-            background: rgba(208, 240, 192, 0.65);
-        }
-
-        .left {
-            height: 100vh;
-            margin-bottom: 20px;
-            background-color: white;
-            margin-left: 15px;
-            flex-grow: 1;
-        }
-
-        .right {
-            height: 100vh;
-            margin-bottom: 20px;
-            margin-right: 15px;
-            flex-grow: 1;
-        }
-
-        .courses {
-            height: 100px;
-            background: #ffffff;
-            color: rgb(0,0,0);
-            margin-left: 20px;
-            margin-right: 15px;
-        }
-
-
-
-        .videocontainer {
-            width: 55%;
-            background: none;
-        }
-
-        .chatcontainer {
-            width: 45%;
-            height: 100px;
-        }
-    </style>
+    <!-- load api without page delay-->
+    <script>
+        (function (t, a, l, k, j, s) {
+            s = a.createElement('script'); s.async = 1; s.src = "https://cdn.talkjs.com/talk.js"; a.head.appendChild(s)
+                ; k = t.Promise; t.Talk = {
+                    v: 3, ready: {
+                        then: function (f) {
+                            if (k) return new k(function (r, e) { l.push([f, r, e]) }); l
+                                .push([f])
+                        }, catch: function () { return k && new k() }, c: l
+                    }
+                };
+        })(window, document, []);
+    </script>
 </head>
+
+
+
+<style>
+    .containdiv{
+        width:100%;
+        height:100%;
+        padding-left: 5px;
+        padding-top:60px;
+        bottom:0;
+        display:block;
+        position: absolute;
+    }
+
+    .containdiv .videocontainer{
+        padding-top:80px;
+        padding-left: 5px;
+        padding-right:360px;
+        padding-bottom: 10px;
+        bottom:0;
+        position:absolute;
+        height:100%;
+        width:100%;
+        display:block;
+    }
+
+    .containdiv .videocontainer .videowrapper{
+        position: relative;
+        padding-bottom: 56.25%;
+    }
+
+    .containdiv .videocontainer .videowrapper iframe{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .containdiv .interactcontainer{
+        right:0;
+        bottom:0;
+        padding-top:60px;
+        position:absolute;
+        width: 350px;
+        height: 100%;
+        display: block;
+    }
+
+    .containdiv .interactcontainer .contentheader{
+        height:35px;
+        width:350px;
+        right:0;
+        padding-top:3px;
+        text-align: center;
+        border:solid;
+        border-radius:10px;
+        border-color: lightgrey;
+        border-width:1px;
+        background:rgba(220,220,220,0.8);
+    }
+
+    .containdiv .interactcontainer .interactcontent{
+        height: 100%;
+        width: 350px;
+        bottom:0;
+        padding-top:60px;
+        position:absolute;
+        display: flex;
+        flex: 0 0 1px;
+    }
+
+    .containdiv .interactcontainer .interactoptions{
+        width:350px;
+        height:50px;
+        right:0;
+        bottom:0;
+        position:absolute;
+        background:whitesmoke;
+        display: block;
+    }
+
+    .containdiv .interactcontainer .interactoptions .option{
+        width:172.5px;
+        height:50px;
+        display: inline-block;
+        border:solid;
+        border-color: lightgrey;
+        border-width:1px;
+    }
+
+    .containdiv .interactcontainer .interactoptions .option ul li a{
+        padding-top:7px;
+        display: block;
+        height:49px;
+        color: #fff;
+        position: relative;
+        color: rgb(81,81,206);
+        white-space: nowrap;
+        align-content: center;
+    }
+
+    .wrapper .top_navbar .top_menu ul li a{
+        padding-top:8px;}
+
+    .containdiv .interactcontainer .interactoptions .option ul li a:hover,
+    .containdiv .interactcontainer .interactoptions .option ul li a.active{
+        background: rgb(81,81,206);
+        color: white;
+        cursor: pointer;
+    }
+    .containdiv .interactcontainer .interactoptions .option ul li a span.icon{
+        margin:0px;
+        text-align: center;
+        display: block;
+    }
+
+    .containdiv .interactcontainer .interactoptions .option ul li a span.title{
+        margin:0px;
+        text-align: center;
+        display:block;
+    }
+
+    .containdiv .interactcontainer .interactcontent .chatcontainer{
+        height:100%;
+        width:100%;
+        bottom:0;
+        padding-top:150px;
+        margin-bottom:50px;
+        position:absolute;
+    }
+
+    .chatscroll{
+        background: whitesmoke;
+        color: black;
+    }
+
+    .containdiv .interactcontainer .interactcontent .quizcontainer{
+        height:100%;
+        width:100%;
+        bottom:0;
+        padding-top:145px;
+        margin-bottom:50px;
+        position:absolute;
+
+    }
+
+    .containdiv .interactcontainer .interactcontent .quizcontainer .quizcontent{
+        height:100%;
+        width:100%;
+        border:solid;
+        margin-bottom:50px;
+        border-color: lightgrey;
+        border-width:1px;
+        background:whitesmoke;
+    }
+</style>
+
 <body>
-
-    <div class="top-container">
-
-        <img src="UNSW logo.png" alt="logo" class="logo" height="50" width="130">
-    </div>
-
-    <div class="header" id="myHeader">
-        <span style="font-size:30px;position: absolute; left: 20px; bottom: 605px;cursor:pointer" onclick="openNav()"> &#9776; </span>
-        <h2 style='display: inline;'><b>My Workspace</b></h2>
-        <span style="position:absolute; right: 160px; bottom: 605px"><a href="student_home_pg.html"> <i class="fa fa-home" style="font-size:30px;color:white;"></i></span>
-
-        <div class="dropdown">
-            <button class="dropbtn">
-                Rachel Johnson
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">My Profile</a>
-                <a href="#">Preferences</a>
-                <a href="#">Settings</a>
+    <div class="wrapper">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <li>
+                    <a href="student_workspace_session.php">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </li>
+            </div>
+            <div class="top_menu">
+                <div class="logo">Live Session</div>
+                <ul>
+                    <li>
+                        <a href="student_home_pg.php">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="far fa-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login_page.php">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
-    </div>
-
-
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <br />
-        <br />
-
-        <a href="student_workspace_session.html"><i class="fas fa-chalkboard-teacher"></i> Sessions</a>
-        <a href="student_workspace_group.html"><i class="fa fa-users"></i> Contacts</a>
-        <a href="student_workspace_chat.html"><i class="fa fa-comments"></i> Chat</a>
-        <a href="login_page.html"><i class="fa fa-sign-out"></i> Log out</a>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <a href="student_help.html"><i class="fa fa-question-circle"></i> Help</a>
-    </div>
-
-
-
-    <div id="main">
-        <div id="containdiv">
-            <h3>Sessions</h3>
-            <hr />
-            <br />
-
+        <div class="containdiv">
 
             <div class="videocontainer">
-                <h2 style="text-align:center">INFS3617</h2>
-                <p style="text-align:center">Welcome to the active session for INFS3617</p>
-                <h3>Workshop Video</h3>
-                <iframe width="760" height="527"
-                        src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
-            <div class="chatcontainer">
-                <div>
-                    <h3>Workshop Quiz</h3>
-                    <div>
-                        Due 1 Hour After Workshop End
-                    </div>
+                <div class="videowrapper">
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <p style="text-align:center">Click <u> HERE</u> to enter live-stream mode</p>
+            <div class="interactcontainer">
+                <div id="chat" class="interactcontent">
+                    <header class="contentheader">
+                        <h2>Chat</h2>
+                    </header>
+                    <section class="chatcontainer">
+                        <div class="chatscroll" id="chatbox"></div>
+                    </section>
+                </div>
+
+                <div id="quiz" class="interactcontent" style="display:none">
+                    <header class="contentheader">
+                        <h2>Workshop Quiz</h2>
+                    </header>
+                    <section class="quizcontainer">
+                        <section class="quizcontent">
+                            <br />
+                            <br />
+                            <h4 style="padding-left: 10px;padding-top:5px"><a href="index.php"> Click <u> here </u> to launch your Quiz Workspace</a></h4>
+                            
+
+                        </section>
+                    </section>
+                </div>
+
+                <div class="interactoptions">
+                    <div class="option" onclick="openContent(event, 'chat')" id="defaultOpen">
+                        <ul>
+                            <li>
+                                <a>
+                                    <span class="icon">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                    </span>
+                                    <span class="title">Chat</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="option" onclick="openContent(event, 'quiz')">
+                        <ul>
+                            <li>
+                                <a>
+                                    <span class="icon">
+                                        <i class="fas fa-users"></i>
+                                    </span>
+                                    <span class="title">Quiz</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
     <script>
-                    window.onscroll = function () { myFunction() };
 
-                    var header = document.getElementById("myHeader");
-                    var sticky = header.offsetTop;
+        document.getElementById("defaultOpen").click();
 
-                    function myFunction() {
-                        if (window.pageYOffset > sticky) {
-                            header.classList.add("sticky");
-                        } else {
-                            header.classList.remove("sticky");
-                        }
-                    }
+        function openContent(evt, contentTitle) {
+            var i, interactContent, option;
 
-                    function openNav() {
-                        document.getElementById("mySidenav").style.width = "300px";
-                        document.getElementById("main").style.marginLeft = "300px";
+            interactContent = document.getElementsByClassName("interactContent");
+            for (i = 0; i < interactContent.length; i++) {
+                interactContent[i].style.display = "none";
+            }
 
+            option = document.getElementsByClassName("option");
+            for (i = 0; i < option.length; i++) {
+                option[i].className = option[i].className.replace(" active", "");
+            }
 
-
-
-
-                    }
-
-                    function closeNav() {
-                        document.getElementById("mySidenav").style.width = "0";
-                        document.getElementById("main").style.marginLeft = "0";
-                        document.body.style.backgroundColor = "white";
-
-                    }
+            document.getElementById(contentTitle).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
 
+    <script>
+        Talk.ready.then(function () {
+            var me = new Talk.User({
+                id: "123456",
+                name: "Alice",
+                email: "alice@example.com",
+                photoUrl: "https://demo.talkjs.com/img/alice.jpg",
+                welcomeMessage: "Hey there! How are you? :-)"
+            });
+            window.talkSession = new Talk.Session({
+                appId: "tbYam5vB",
+                me: me
+            });
+            var other = new Talk.User({
+                id: "654321",
+                name: "Sebastian",
+                email: "Sebastian@example.com",
+                photoUrl: "https://demo.talkjs.com/img/sebastian.jpg",
+                welcomeMessage: "Hey, how can I help?"
+            });
+
+            var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
+            conversation.setParticipant(me);
+            conversation.setParticipant(other);
+            conversation.setAttributes({
+                subject: "Agile Scrum"
+            });
+            var inbox = talkSession.createInbox({ selected: conversation });
+            inbox.mount(document.getElementById("chatbox"));
+        });
+
+    </script>
 
 </body>
 </html>

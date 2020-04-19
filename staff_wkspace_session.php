@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +38,7 @@
             </li>        
         </div>
         <div class="top_menu">
-            <div class="logo">Sessions</div>
+            <div class="logo" style="text-align:center">E-Learning Workspace</div>
             <ul>
                 <li><a href="student_home_pg.php">
                     <i class="fas fa-home"></i></a></li>
@@ -40,8 +46,11 @@
                     <i class="fas fa-cog"></i></a></li>
                 <li><a href="#">
                     <i class="far fa-user"></i></a></li>
-                <li><a href="login_page.php">
-                    <i class="fas fa-sign-out-alt"></i></a></li>
+                <li>
+                    <a href="login_page.php">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -51,22 +60,33 @@
             <li><a href="student_workspace_session.php">
                 <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
                 <span class="title">Sessions</span></a></li>
+
             <li><a href="student_workspace_group.php">
                 <span class="icon"><i class="fas fa-users"></i></span>
-                <span class="title">Groups</span></a></li>
+                <span class="title">Discussion</span></a></li>
+
             <li><a href="student_workspace_chat.php">
-                <span class="icon"><i class="fas fa-comments"></i></span>
-                <span class="title">Chat</span></a></li>
+                <span class="icon"><i class="fas fa-address-book"></i></span>
+                <span class="title">Contacts</span></a></li>
+
+            <li>
+                <a href="dash.php">
+                    <span class="icon">
+                        <i class="fas fa-poll-h"></i>
+                    </span>
+                    <span class="title">Quiz</span>
+                </a>
+            </li>
         </ul>
     </div>
 
     <div class="containdiv">
-        <h2>Active Sessions</h2>
+        <h2>Active Lessons</h2>
         
         <div class="sessions">
             <div class="workshop">
             <ul>
-                <li><a href="student_session_activity.php">
+                <li><a href="quiz_home.php">
                 <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
                 <span class="title">INFS3617 W8</span></a></li>
             </div>
@@ -76,9 +96,11 @@
                 <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
                 <span class="title">INFS3605 W8</span></a></li>
             </div>
+
+           
         </div>
 
-        <h2>Past Sessions</h2>
+        <h2>Past Lessons</h2>
         
         <div class="sessions">
             <div class="workshop">
@@ -93,6 +115,9 @@
                 <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
                 <span class="title">INFS3605 W7</span></a></li>
             </div>
+
+
+
         </div>
 
     </div>

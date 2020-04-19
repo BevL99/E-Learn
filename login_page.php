@@ -20,8 +20,14 @@ if(isset($_POST['submit'])){
 
 	if ($row['STUDENT_ID'] == $username && $row['STUDENT_PASSWORD'] == $password){
         $success="Login Successful";
-        $_SESSION['uid'] = $username;
-        $_SESSION['psw'] = $password;
+        $_SESSION["stuuser"] = $username;
+        $_SESSION["stupass"] = $password;
+        $_SESSION["stuname"] = $row['STUDENT_FNAME'];
+        $_SESSION["stulast"] = $row['STUDENT_LNAME'];
+        $_SESSION["stumail"] = $row['STUDENT_EMAIL'];
+        $_SESSION["stuyear"] = $row['STUDENT_YEAR'];
+        $_SESSION["stuterm"] = $row['STUDENT_TERM'];
+        
         header("Location: student_home_pg.php");
     }
     else{
@@ -47,8 +53,14 @@ if(isset($_POST['submit_btn'])){
 
 	if ($row['STAFF_ID'] == $username && $row['STAFF_PASSWORD'] == $password){
         $success="Login Successful";
-        $_SESSION['uid'] = $username;
-        $_SESSION['psw'] = $password;
+        $_SESSION["stauser"] = $username;
+        $_SESSION["stapass"] = $password;
+        $_SESSION["staname"] = $row['STAFF_FNAME'];
+        $_SESSION["stalast"] = $row['STAFF_LNAME'];
+        $_SESSION["stamail"] = $row['STAFF_EMAIL'];
+        $_SESSION["stuphone"] = $row['STAFF_PHONE'];
+        $_SESSION["sturole"] = $row['STAFF_ROLE'];
+        
         header("Location: staff_home_pg.php");
     }
     else{
@@ -85,8 +97,12 @@ mysqli_close($db);
         margin: 10px 0;
         border: none;
         cursor: pointer;
-        width: 300px;
+        width: 225px;
         display: list-item;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        
         }
         
         button:hover{
@@ -118,9 +134,9 @@ mysqli_close($db);
 
     .bdcontainer {
         
-        padding: 10px 30px;
-        width: 95%;
-        height: 100%;
+        padding: 40px 60px;
+        width: 99%;
+        
         margin: auto;
         border: none;
         background-image: url('login_bg.png');
@@ -146,18 +162,15 @@ mysqli_close($db);
         padding: 10px;
         color: rgb(0, 0, 0);
         }
-        .button {
-        text-align: center;
-        position: relative;
-        top: 50%;
-        left: 12%;
-    }
+        
         .inline-block {
    display: inline-block;
 }
 
         .banner{
             border-bottom: 10px solid #0E4D92;
+            margin: 0 auto; 
+            width: 99%;
         }
     
 </style>
@@ -168,7 +181,7 @@ mysqli_close($db);
 
 <div class="banner">
     
-    <img src="unsw_elearn_blk.jpg" style="width:40%; height:40%"/>
+    <img src="unsw_elearn_blk.jpg" style="width:30%; height:30%"/>
 </div>
 
 
@@ -185,6 +198,9 @@ mysqli_close($db);
         <form method="post">
             <body style="width: 100px">
                 <h2 align="center"> <font size="8">Sign On</font></h2>
+                <br />
+                <br />
+
 
                 <label for="uid"><b>USER ID</b></label>
                 <input type="text" placeholder="Enter your zID" name="uid" required>
@@ -195,7 +211,7 @@ mysqli_close($db);
                  <p class="error" align="center" style="color:red">
                 <?php echo $error; ?>
                  </p>
-
+                <br />
                 <p align="center"> <font size="2">I agree to the <b>Terms & Conditions</b> of using UNSW ICT resources as set out in the policy and procedures.</font></p>
                 
                 <div class="btncontainer">

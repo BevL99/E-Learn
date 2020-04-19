@@ -61,39 +61,8 @@
     </div>
 
     <div class="containdiv">
-        <h2>Active Sessions</h2>
-        
-        <div class="sessions">
-            <div class="workshop">
-            <ul>
-                <li><a href="student_session_activity.php">
-                <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
-                <span class="title">INFS3617 W8</span></a></li>
-            </div>
-            <div class="workshop">
-            <ul>
-                <li><a href="student_session_activity.php">
-                <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
-                <span class="title">INFS3605 W8</span></a></li>
-            </div>
-        </div>
-
-        <h2>Past Sessions</h2>
-        
-        <div class="sessions">
-            <div class="workshop">
-            <ul>
-                <li><a href="student_session_activity.php">
-                <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
-                <span class="title">INFS3617 W7</span></a></li>
-            </div>
-            <div class="workshop">
-            <ul>
-                <li><a href="student_session_activity.php">
-                <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
-                <span class="title">INFS3605 W7</span></a></li>
-            </div>
-        </div>
+       
+       
 
     </div>
 </div>        
