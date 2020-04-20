@@ -86,7 +86,7 @@ session_start();
         <div class="sessions">
             <div class="workshop">
             <ul>
-                <li><a href="quiz_home.php">
+                <li><a href="groupchat.php">
                 <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
                 <span class="title">INFS3617 W8</span></a></li>
             </div>

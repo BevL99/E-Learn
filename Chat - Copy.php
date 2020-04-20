@@ -126,8 +126,7 @@
     .wrapper .top_navbar .top_menu ul li a{
         padding-top:8px;}
 
-    .containdiv .interactcontainer .interactoptions .option ul li a:hover,
-    .containdiv .interactcontainer .interactoptions .option ul li a.active{
+    .containdiv .interactcontainer .interactoptions .option ul li a:hover .containdiv .interactcontainer .interactoptions .option ul li a.active{
         background: rgb(81,81,206);
         color: white;
         cursor: pointer;
@@ -217,7 +216,7 @@
         </div>
 
         <div class="containdiv">
-
+            
             <div class="videocontainer">
                 <div class="videowrapper">
                     <iframe width="100%" height="100%"
@@ -234,94 +233,36 @@
                     </section>
                 </div>
 
-                <div id="quiz" class="interactcontent" style="display:none">
-                    <header class="contentheader">
-                        <h2>Workshop Quiz</h2>
-                    </header>
-                    <section class="quizcontainer">
-                        <section class="quizcontent">
-                            <br />
-                            <br />
-                            <h4 style="padding-left: 10px;padding-top:5px"><a href="index.php"> Click <u> here </u> to launch your Quiz Workspace</a></h4>
-                            
-
-                        </section>
-                    </section>
-                </div>
-
-                <div class="interactoptions">
-                    <div class="option" onclick="openContent(event, 'chat')" id="defaultOpen">
-                        <ul>
-                            <li>
-                                <a>
-                                    <span class="icon">
-                                        <i class="fas fa-chalkboard-teacher"></i>
-                                    </span>
-                                    <span class="title">Chat</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="option" onclick="openContent(event, 'quiz')">
-                        <ul>
-                            <li>
-                                <a>
-                                    <span class="icon">
-                                        <i class="fas fa-users"></i>
-                                    </span>
-                                    <span class="title">Quiz</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
 
             </div>
         </div>
     </div>
 
-    <script>
-
-        document.getElementById("defaultOpen").click();
-
-        function openContent(evt, contentTitle) {
-            var i, interactContent, option;
-
-            interactContent = document.getElementsByClassName("interactContent");
-            for (i = 0; i < interactContent.length; i++) {
-                interactContent[i].style.display = "none";
-            }
-
-            option = document.getElementsByClassName("option");
-            for (i = 0; i < option.length; i++) {
-                option[i].className = option[i].className.replace(" active", "");
-            }
-
-            document.getElementById(contentTitle).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
+    
 
     <script>
         Talk.ready.then(function () {
             var me = new Talk.User({
-                id: "123456",
-                name: "Alice",
-                email: "alice@example.com",
-                photoUrl: "https://demo.talkjs.com/img/alice.jpg",
-                welcomeMessage: "Hey there! How are you? :-)"
-
-            });
-            window.talkSession = new Talk.Session({
-                appId: "tbYam5vB",
-                me: me
-            });
-            var other = new Talk.User({
                 id: "654321",
                 name: "Sebastian",
                 email: "Sebastian@example.com",
                 photoUrl: "https://demo.talkjs.com/img/sebastian.jpg",
                 welcomeMessage: "Hey, how can I help?"
+            });
+            
+
+            window.talkSession = new Talk.Session({
+                appId: "tbYam5vB",
+                me: me
+            });
+
+            var other = new Talk.User({
+                id: "123456",
+                name: "Alice",
+                email: "alice@example.com",
+                photoUrl: "https://demo.talkjs.com/img/alice.jpg",
+                welcomeMessage: "Hey there! How are you? :-)"
             });
 
             var conversation = talkSession.getOrCreateConversation(Talk.oneOnOneId(me, other))
@@ -330,7 +271,7 @@
             conversation.setAttributes({
                 subject: "Agile Scrum"
             });
-            var inbox = talkSession.createInbox({ conversation });
+            var inbox = talkSession.createInbox({ selected: conversation });
             inbox.mount(document.getElementById("chatbox"));
         });
 
