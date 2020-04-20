@@ -22,7 +22,7 @@ if (@$_GET['w']) {
 <body>
 <div class="row header">
 <div class="col-lg-6">
-<span class="logo">Skill's Breaker</span></div>
+<span class="logo">E-Learn Workspace</span></div>
 <div class="col-md-2">
 </div>
 <div class="col-md-4">
@@ -124,7 +124,7 @@ else {
 <div class="row footer">
   <div class="col-md-2 box"></div>
 <div class="col-md-6 box">
-<span href="#" data-target="#login" style="color:lightyellow">Organized by abc<br><br></span></div>
+</div>
 <div class="col-md-2 box">
 <span href="feedback.php" style="color:lightyellow;text-decoration:underline" onmouseover="this.style('color:yellow')">Feedback</span></div>
 
