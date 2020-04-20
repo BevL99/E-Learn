@@ -1,12 +1,12 @@
 body{overflow-x:hidden;width:100%;font: 12px "Century Gothic", "Times Roman", sans-serif;background:#eee;min-height:550px;background-attachment:fixed;}
-.bg{min-height:540px;}
-.bg1{min-height:535px;background-repeat: repeat-x;background-color: #202020;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+.bg{min-height:540px; background-color: rgba(227, 228, 255, 0.842);}
+.bg1{background-color:rgba(227, 228, 255, 0.842);min-height:535px;background-repeat: repeat-x;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
 @font-face {font-family: 'typo';src: url('../fonts/typo.ttf');}
 @font-face {font-family: 'gothic';src: url('../fonts/gothics.ttf');}
 .panel{border-color:#eee;margin:40px;padding:20px;font: 15px "Century Gothic", "Times Roman", sans-serif;}
 .title{font-family:'typo';}
-.header{height:70px;}
-.logo{font-family:'typo';font-size:35px;margin:15px;}
+.header{height:70px; background-color: rgb(81,81,206);}
+.logo{font-family:'typo';font-size:35px;margin:15px; color: white; text-align:center;}
 .title1{font: 12px "Century Gothic", "Times Roman", sans-serif;}
 .title2{font-family: 'Ubuntu', sans-serif;font-size:20px;}
 .sub1{color:#FFFFFF;background:#0000ff;font-size:15px;margin:20px;padding:8px;}
@@ -14,7 +14,7 @@ body{overflow-x:hidden;width:100%;font: 12px "Century Gothic", "Times Roman", sa
 .logb:hover{color:lightyellow;}
 .sub{color:#FFFFFF;background:#0000ff;font-size:15px;margin:20px;padding:8px;}
 .sub:hover{background-color:#000066;}
-.footer{font-size:15px;text-align:center;border-top:1px solid;border-color:#323232;background-color:#202020;}
+.footer{font-size:15px;text-align:center;border-top:1px solid;border-color:#323232;background-color:rgb(81,81,206);}
 .footer a{margin:25px;color:#0000ff;text-decoration:none;font: 15px "Century Gothic", "Times Roman", sans-serif;}
 .box{padding:9px;}
 hr{color:#000000;}

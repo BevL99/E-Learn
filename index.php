@@ -20,6 +20,7 @@ else{}
   
     <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="styles.css" />
  <link  rel="stylesheet" href="css/font.css">
  <script src="js/jquery.js" type="text/javascript"></script>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -43,28 +44,21 @@ if (@$_GET['w']) {
 <body>
    
     <div class="wrapper">
-        <div class="top_navbar">
-            <div class="hamburger">
-                
-                    <a href="staff_wkspace_session.php">
-                        <i class="fas fa-arrow-left fa-2x"></i>
-                    </a>
-                
-            </div>
-
-            <div class="top_menu">
-                <div class="logo" style="text-align:center; color: black">E-Learn Quizzes</div>
-                
-                   
-                    
-            </div>
+    <div class="top_navbar">
+        <div class="hamburger">
+                <li><a href="staff_wkspace_session.php">
+                <i class ="fas fa-arrow-left"></i></a>
+            </li>        
         </div>
+        <div class="top_menu">
+            <div class="logo" style="text-align:center">E-Learn Quiz Workspace</div>
+            
+        </div>
+    </div>
+
+    
         
         </div>
-    
-       
-    
-
 
 <div class="col-lg-6">
 </div>
@@ -83,7 +77,7 @@ if (@$_GET['w']) {
 <div class="form-group">
   <label class="col-md-3 control-label" for="username"></label>  
   <div class="col-md-6">
-  <input id="username" name="username" placeholder="Username" class="form-control input-md" type="username">
+  <input id="username" name="username" placeholder="Username" class="form-control input-md" type="text">
     
   </div>
 </div>
@@ -96,16 +90,18 @@ if (@$_GET['w']) {
 </div>
 
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer"> 
+          <button type="submit" class="btn btn-primary">Log in</button>
+        
+          </div>
+         <div class="modal-footer"> 
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Log in</button>
     </fieldset>
 </form>
       </div>
     </div>
   </div>
 </div>
-
 
 
 <div class="bg1">
@@ -118,8 +114,9 @@ if (@$_GET['w']) {
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
-  <h3 align="center">Registration Form</h3>
-    
+   
+  <h3 align="center"><b><u>QuizBiz Registration Form</u></b></h3>
+   <p align="center">(For first time users only)</p>   
   </div>
 </div>
 
@@ -137,7 +134,7 @@ if (@$_GET['q7']) {
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
-  <input id="name" name="name" placeholder="Enter your name" class="form-control input-md" type="text" value="<?php
+  <input id="name" name="name" placeholder="Enter your full name" class="form-control input-md" type="text" value="<?php
 if (isset($_GET['name']))
 {
 echo $_GET['name'];
@@ -150,7 +147,7 @@ echo $_GET['name'];
 <div class="form-group">
   <label class="col-md-12 control-label title1" for="username"></label>
   <div class="col-md-12">
-    <input id="username" name="username" placeholder="Choose a username" class="form-control input-md" type="username" value="<?php
+    <input id="username" name="username" placeholder="Enter your username" class="form-control input-md" type="text" value="<?php
 if (isset($_GET['username']))
 {
 echo $_GET['username'];
@@ -178,6 +175,11 @@ if (isset($_GET['q7']))
     
   </div>
 </div>
+   
+    <h5 align="center"> I agree to the <b>Terms & Conditions</b> of using UNSW ICT resources as set out in the policy and procedures.</h5>
+     <br />
+    <p align="center" style="color: red"> Note: Please use your UNSW zID as username to register.</p>
+
 <div class="form-group">
   <label class="col-md-12 control-label" for=""></label>
   <div class="col-md-12" style="text-align: center"> 
@@ -193,9 +195,9 @@ if (isset($_GET['q7']))
 <div class="col-md-3 box">
 <a href="#" data-toggle="modal" data-target="#login" style="color:lightyellow">Admin Login</a></div>
 <div class="col-md-3 box">
-<span href="#" data-target="#login" style="color:lightyellow">Organized by abc<br><br></span>
-</div>
 
+</div>
+    
 
 <div class="col-md-2 box">
 <a href="feedback.php" style="color:lightyellow;" onmouseover="this.style('color:yellow')" target="new">Feedback</a></div>

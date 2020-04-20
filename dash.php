@@ -67,24 +67,7 @@ $(function () {
 
             <div class="top_menu">
                 <div class="logo" style="text-align:center">E-Learning Workspace</div>
-                <ul>
-                    <li>
-                        <a href="staff_home_pg.php">
-                            <i class="fas fa-home"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-cog"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="far fa-user"></i>
-                        </a>
-                    </li>
-                    
-                </ul>
+               
             </div>
         </div>
         
@@ -192,7 +175,7 @@ if (@$_GET['q'] == 2) {
     $q = mysqli_query($con, "SELECT * FROM rank") or die('Error223');
     echo '<div class="panel title">
 <table class="table table-striped title1" >
-<tr><td style="vertical-align:middle"><b>Rank</b></td><td style="vertical-align:middle"><b>Name</b></td><td style="vertical-align:middle"><b>Branch</b></td><td style="vertical-align:middle"><b>Username</b></td><td style="vertical-align:middle"><b>Roll number</b></td><td style="vertical-align:middle"><b>Gender</b></td><td style="vertical-align:middle"><b>Score</b></td></tr>';
+<tr><td style="vertical-align:middle"><b>Rank</b></td><td style="vertical-align:middle"><b>Name</b></td><td style="vertical-align:middle"><b>Username</b></td><td style="vertical-align:middle"><b>Score</b></td></tr>';
     $c = $showfrom-1;
     $total = mysqli_num_rows($q);
     if($total >= $showfrom){
@@ -209,7 +192,7 @@ if (@$_GET['q'] == 2) {
                 $gender   = $row['gender'];
             }
             $c++;
-            echo '<tr><td style="color:#99cc32"><b>' . $c . '</b></td><td style="vertical-align:middle">' . $name . '</td><td style="vertical-align:middle">' . $branch . '</td><td style="vertical-align:middle">' . $username . '</td><td style="vertical-align:middle">' . $rollno . '</td><td style="vertical-align:middle">' . $gender . '</td><td style="vertical-align:middle">' . $s . '</td><td style="vertical-align:middle">';
+            echo '<tr><td style="color:#99cc32"><b>' . $c . '</b></td><td style="vertical-align:middle">' . $name . '</td><td style="vertical-align:middle">' . $username . '</td><td style="vertical-align:middle">' . $s . '</td><td style="vertical-align:middle">';
         }
     }
     else{
@@ -257,7 +240,7 @@ if (@$_GET['q'] == 1) {
     
     $result = mysqli_query($con, "SELECT * FROM user") or die('Error');
     echo '<div class="panel"><table class="table table-striped title1">
-<tr><td style="vertical-align:middle"><b>S.N.</b></td><td style="vertical-align:middle"><b>Name</b></td><td style="vertical-align:middle"><b>Gender</b></td><td style="vertical-align:middle"><b>Rollno</b></td><td style="vertical-align:middle"><b>Branch</b></td><td style="vertical-align:middle"><b>Username</b></td><td style="vertical-align:middle"><b>Phno</b></td><td style="vertical-align:middle"></td></tr>';
+<tr><td style="vertical-align:middle"><b>S.N.</b></td><td style="vertical-align:middle"><b>Name</b></td><td style="vertical-align:middle"><b>Username</b></td><td style="vertical-align:middle"></td></tr>';
     $c = 1;
     while ($row = mysqli_fetch_array($result)) {
         $name      = $row['name'];
@@ -267,8 +250,7 @@ if (@$_GET['q'] == 1) {
         $branch    = $row['branch'];
         $username1 = $row['username'];
         
-        echo '<tr><td style="vertical-align:middle">' . $c++ . '</td><td style="vertical-align:middle">' . $name . '</td><td style="vertical-align:middle">' . $gender . '</td><td style="vertical-align:middle">' . $rollno . '</td><td style="vertical-align:middle">' . $branch . '</td><td style="vertical-align:middle">' . $username1 . '</td><td style="vertical-align:middle">' . $phno . '</td>
-  <td style="vertical-align:middle"><a title="Delete User" href="update.php?dusername=' . $username1 . '"><b><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></b></a></td></tr>';
+        echo '<tr><td style="vertical-align:middle">' . $c++ . '</td><td style="vertical-align:middle">' . $name . '</td><td style="vertical-align:middle">' . $username1 . '</td><td style="vertical-align:middle"><a title="Delete User" href="update.php?dusername=' . $username1 . '"><b><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></b></a></td></tr>';
     }
     $c = 0;
     echo '</table></div>';
@@ -336,14 +318,14 @@ if (@$_GET['q'] == 4 && !(@$_GET['step'])) {
 <div class="form-group">
   <label class="col-md-12 control-label" for="right"></label>  
   <div class="col-md-12">
-  <input id="right" name="right" placeholder="Enter marks on right answer" class="form-control input-md" min="0" type="number">
+  <input id="right" name="right" placeholder="Enter mark awarded per right answer" class="form-control input-md" min="0" type="number">
     
   </div>
 </div>
 <div class="form-group">
   <label class="col-md-12 control-label" for="wrong"></label>  
   <div class="col-md-12">
-  <input id="wrong" name="wrong" placeholder="Enter minus marks on wrong answer without sign" class="form-control input-md" min="0" type="number">
+  <input id="wrong" name="wrong" placeholder="Enter mark deducted per wrong answer without sign" class="form-control input-md" min="0" type="number">
     
   </div>
 </div>
