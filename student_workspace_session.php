@@ -51,12 +51,10 @@
             <li><a href="student_workspace_session.php">
                 <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
                 <span class="title">Sessions</span></a></li>
-            <li><a href="student_workspace_group.php">
-                <span class="icon"><i class="fas fa-users"></i></span>
-                <span class="title">Groups</span></a></li>
-            <li><a href="student_workspace_chat.php">
-                <span class="icon"><i class="fas fa-comments"></i></span>
-                <span class="title">Chat</span></a></li>
+            <li><a href="contacts.php">
+                <span class="icon"><i class="fas fa-address-book"></i></span>
+                <span class="title">Contacts</span></a></li>
+            
         </ul>
     </div>
 

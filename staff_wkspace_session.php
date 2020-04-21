@@ -33,14 +33,14 @@ session_start();
 <div class="wrapper">
     <div class="top_navbar">
         <div class="hamburger">
-                <li><a href="student_home_pg.php">
+                <li><a href="staff_home_pg.php">
                 <i class ="fas fa-arrow-left"></i></a>
             </li>        
         </div>
         <div class="top_menu">
             <div class="logo" style="text-align:center">E-Learning Workspace</div>
             <ul>
-                <li><a href="student_home_pg.php">
+                <li><a href="staff_home_pg.php">
                     <i class="fas fa-home"></i></a></li>
                 <li><a href="#">
                     <i class="fas fa-cog"></i></a></li>
@@ -57,15 +57,12 @@ session_start();
 
     <div class="sidebar">
         <ul>
-            <li><a href="student_workspace_session.php">
+            <li><a href="staff_wkspace_session.php">
                 <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
                 <span class="title">Sessions</span></a></li>
 
-            <li><a href="student_workspace_group.php">
-                <span class="icon"><i class="fas fa-users"></i></span>
-                <span class="title">Discussion</span></a></li>
-
-            <li><a href="student_workspace_chat.php">
+            
+            <li><a href="staff_contacts.php">
                 <span class="icon"><i class="fas fa-address-book"></i></span>
                 <span class="title">Contacts</span></a></li>
 
