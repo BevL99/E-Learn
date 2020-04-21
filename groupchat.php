@@ -28,11 +28,11 @@
     .containdiv{
         width:100%;
         height:100%;
-        padding-left: 5px;
+        margin-left: 50px;
         padding-top:60px;
-        bottom:0;
+        
         display:block;
-        position: absolute;
+        
     }
 
     .containdiv .videocontainer{
@@ -56,7 +56,7 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        width: 100%;
+        width: 90%;
         height: 100%;
     }
 
@@ -183,7 +183,7 @@
         <div class="top_navbar">
             <div class="hamburger">
                 <li>
-                    <a href="student_workspace_session.php">
+                    <a href="staff_wkspace_session.php">
                         <i class="fas fa-arrow-left"></i>
                     </a>
                 </li>
@@ -192,7 +192,7 @@
                 <div class="logo">Live Session</div>
                 <ul>
                     <li>
-                        <a href="student_home_pg.php">
+                        <a href="staff_home_pg.php">
                             <i class="fas fa-home"></i>
                         </a>
                     </li>
@@ -214,12 +214,13 @@
                 </ul>
             </div>
         </div>
+        </div>
 
         <div class="containdiv">
             
             <div class="videocontainer">
                 <div class="videowrapper">
-                    <iframe width="100%" height="100%"
+                    <iframe width="50%" height="100%"
                         src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
@@ -237,7 +238,7 @@
 
             </div>
         </div>
-    </div>
+    
 
     
     
