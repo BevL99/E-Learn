@@ -43,13 +43,24 @@
         text-align: left;
     }
 
+    .top-container {
+            background-color: #ffffff;
+            padding: 10px;
+        }
+
 </style>
 
 <body>
+    
+
 <div class="wrapper">
-    <div class="top_navbar">
+    <div class="top-container">
+
+        <img src="unsw_elearn_blk.jpg" alt="logo" class="logo" height="50" width="220">
+    </div>
+    <div class="top_navbar" style="padding-top:80px">
         <div class="top_menu">
-            <div class="logo">Home</div>
+            <div class="logo" style="text-align:center">Home</div>
             <ul>
                 <li><a href="#">
                     <i class="fas fa-cog"></i></a></li>
@@ -80,10 +91,10 @@
         <section class="summaryitems">
             <div class="container">
                 <h4>Upcoming Student Submissions</h4>
-                <div class="content">
+                <br />
                     INFS3605 Assignment 1 <br />
                     INFS3830 3rd Hands-On Assignment
-                </div>
+                
             </div>
         </section>
 

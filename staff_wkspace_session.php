@@ -26,26 +26,39 @@ session_start();
             margin-top: 40px;
         }
 
+           
     </style>
 </head>
 <body>
 
 <div class="wrapper">
+    
     <div class="top_navbar">
         <div class="hamburger">
-                <li><a href="staff_home_pg.php">
-                <i class ="fas fa-arrow-left"></i></a>
-            </li>        
+            <li>
+                <a href="staff_home_pg.php">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </li>
         </div>
         <div class="top_menu">
             <div class="logo" style="text-align:center">E-Learning Workspace</div>
             <ul>
-                <li><a href="staff_home_pg.php">
-                    <i class="fas fa-home"></i></a></li>
-                <li><a href="#">
-                    <i class="fas fa-cog"></i></a></li>
-                <li><a href="#">
-                    <i class="far fa-user"></i></a></li>
+                <li>
+                    <a href="staff_home_pg.php">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-user"></i>
+                    </a>
+                </li>
                 <li>
                     <a href="login_page.php">
                         <i class="fas fa-sign-out-alt"></i>

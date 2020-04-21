@@ -43,11 +43,20 @@
         text-align: left;
     }
 
+    .top-container {
+            background-color: #ffffff;
+            padding: 10px;
+        }
+
 </style>
 
 <body>
 <div class="wrapper">
-    <div class="top_navbar">
+    <div class="top-container">
+
+        <img src="unsw_elearn_blk.jpg" alt="logo" class="logo" height="50" width="220">
+    </div>
+    <div class="top_navbar"style="padding-top:80px">
         <div class="top_menu">
             <div class="logo">Home</div>
             <ul>
@@ -73,17 +82,17 @@
 
         <section class="summaryitems">
             <div class="container">
-            <h4>Your Upcoming Activities</h4>
+            <h4>Announcements</h4>
             </div>
         </section>
 
         <section class="summaryitems">
             <div class="container">
                 <h4>Your Upcoming Submissions</h4>
-                <div class="content">
+                <br />
                     INFS3605 Assignment 1 <br />
                     INFS3830 3rd Hands-On Assignment
-                </div>
+                
             </div>
         </section>
 
