@@ -185,7 +185,6 @@
     table {
             margin:0;
             border-collapse: collapse;
-
         }
         th,
         td {
@@ -228,7 +227,7 @@
                         src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="resources">
-                    <h3>This Weeks Materials</h3>
+                    <h3>This Weeks Materials</h3><br>
                     <table>
                         <tbody>
                         <?php foreach ($files as $file): ?>

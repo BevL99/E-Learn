@@ -37,6 +37,19 @@
             display:block;
         }
 
+        table {
+            margin:0;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            height: 30px;
+            vertical-align: center;
+            border: 1px solid black;
+            padding-left:5px;
+            padding-right: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -101,6 +114,31 @@
             <button type="submit" name="submit">Upload</button>
             <?php include 'filesLogic.php';?>
         </form>
+
+        <br>
+        <br>
+         <h2>Downloads</h2>
+         <div>   
+            <table>
+            <thead>
+                <th>Filename</th>
+                <th>Size</th>
+                <th>Downloads</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+            <?php foreach ($files as $file): ?>
+                <tr>
+                <td><?php echo $file['name']; ?></td>
+                <td><?php echo floor($file['size'] / 1000) . ' KB'; ?></td>
+                <td><?php echo $file['downloads']; ?></td>
+                <td><a href="downloads.php?file_id=<?php echo $file['id'] ?>">Download</a></td>
+                </tr>
+            <?php endforeach;?>
+
+            </tbody>
+            </table>
+         </div>
     </div>        
 
 </body>

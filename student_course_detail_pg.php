@@ -48,7 +48,7 @@
             padding:10px;
         }   
         table {
-            width: 60%;
+            margin:0;
             border-collapse: collapse;
         }
         th,
