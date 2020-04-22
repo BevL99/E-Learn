@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sessions</title>
+    <title>Contacts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/bdbb373685.js" crossorigin="anonymous"></script>
@@ -49,7 +49,7 @@ tr:nth-child(even) {
             </li>        
         </div>
         <div class="top_menu">
-            <div class="logo">Sessions</div>
+            <div class="logo">Contacts</div>
             <ul>
                 <li><a href="staff_home_pg.php">
                     <i class="fas fa-home"></i></a></li>
@@ -82,6 +82,9 @@ tr:nth-child(even) {
                     <span class="title">Quiz</span>
                 </a>
             </li>
+            <li><a href="staff_upload_pg.php">
+                <span class="icon"><i class="fas fa-upload"></i></span>
+                <span class="title">Upload</span></a></li>
         </ul>
     </div>
 

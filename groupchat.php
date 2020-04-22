@@ -123,8 +123,6 @@
         align-content: center;
     }
 
-    .wrapper .top_navbar .top_menu ul li a{
-        padding-top:8px;}
 
     .containdiv .interactcontainer .interactoptions .option ul li a:hover .containdiv .interactcontainer .interactoptions .option ul li a.active{
         background: rgb(81,81,206);

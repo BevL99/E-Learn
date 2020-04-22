@@ -87,6 +87,9 @@ session_start();
                     <span class="title">Quiz</span>
                 </a>
             </li>
+            <li><a href="staff_upload_pg.php">
+                <span class="icon"><i class="fas fa-upload"></i></span>
+                <span class="title">Upload</span></a></li>
         </ul>
     </div>
 

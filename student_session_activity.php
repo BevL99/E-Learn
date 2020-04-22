@@ -26,13 +26,14 @@
 
 <style>
     .containdiv{
-        width:100%;
+        margin-right: 10px;
+        width:calc(100%-160px);
         height:100%;
-        padding-left: 5px;
-        padding-top:60px;
-        bottom:0;
         display:block;
-        position: absolute;
+    }
+
+    .wrapper .top_navbar .top_menu ul li a{
+        padding-top:8px;
     }
 
     .containdiv .videocontainer{
@@ -123,10 +124,7 @@
         align-content: center;
     }
 
-    .wrapper .top_navbar .top_menu ul li a{
-        padding-top:8px;}
-
-    .containdiv .interactcontainer .interactoptions .option ul li a:hover,
+        .containdiv .interactcontainer .interactoptions .option ul li a:hover,
     .containdiv .interactcontainer .interactoptions .option ul li a.active{
         background: rgb(81,81,206);
         color: white;
@@ -183,35 +181,21 @@
     <div class="wrapper">
         <div class="top_navbar">
             <div class="hamburger">
-                <li>
-                    <a href="student_workspace_session.php">
-                        <i class="fas fa-arrow-left"></i>
-                    </a>
-                </li>
+                    <li><a href="student_home_pg.php">
+                    <i class ="fas fa-arrow-left"></i></a>
+                </li>        
             </div>
             <div class="top_menu">
-                <div class="logo">Live Session</div>
+                <div class="logo">Sessions</div>
                 <ul>
-                    <li>
-                        <a href="student_home_pg.php">
-                            <i class="fas fa-home"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-cog"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="far fa-user"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="login_page.php">
-                            <i class="fas fa-sign-out-alt"></i>
-                        </a>
-                    </li>
+                    <li><a href="student_home_pg.php">
+                        <i class="fas fa-home"></i></a></li>
+                    <li><a href="#">
+                        <i class="fas fa-cog"></i></a></li>
+                    <li><a href="#">
+                        <i class="far fa-user"></i></a></li>
+                    <li><a href="login_page.php">
+                        <i class="fas fa-sign-out-alt"></i></a></li>
                 </ul>
             </div>
         </div>
