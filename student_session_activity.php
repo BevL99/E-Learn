@@ -1,4 +1,4 @@
-
+<?php include 'filesLogic.php';?>
 <html>
 <head>
     <title>Live Session</title>
@@ -38,7 +38,7 @@
 
     .containdiv .videocontainer{
         padding-top:80px;
-        padding-left: 5px;
+        padding-left: 10px;
         padding-right:360px;
         padding-bottom: 10px;
         bottom:0;
@@ -51,6 +51,7 @@
     .containdiv .videocontainer .videowrapper{
         position: relative;
         padding-bottom: 56.25%;
+        
     }
 
     .containdiv .videocontainer .videowrapper iframe{
@@ -59,6 +60,11 @@
         left: 0px;
         width: 100%;
         height: 100%;
+    }
+
+    .containdiv .videocontainer .resources{
+        position: relative;
+        margin-top:10px;
     }
 
     .containdiv .interactcontainer{
@@ -175,6 +181,20 @@
         border-width:1px;
         background:whitesmoke;
     }
+
+    table {
+            margin:0;
+            border-collapse: collapse;
+
+        }
+        th,
+        td {
+            height: 30px;
+            vertical-align: center;
+            border: 1px solid black;
+            padding-left:5px;
+            padding-right: 5px;
+        }
 </style>
 
 <body>
@@ -206,6 +226,21 @@
                 <div class="videowrapper">
                     <iframe width="100%" height="100%"
                         src="https://www.youtube.com/embed/IQGyBNL8opY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="resources">
+                    <h3>This Weeks Materials</h3>
+                    <table>
+                        <tbody>
+                        <?php foreach ($files as $file): ?>
+                            <tr>
+                            <td><?php echo $file['name']; ?></td>
+                            <td><?php echo floor($file['size'] / 1000) . ' KB';?></td>
+                            <td><a href="student_course_detail_pg.php?file_id=<?php echo $file['id'] ?>">Download</a></td>
+                            </tr>
+                        <?php endforeach;?>
+
+                        </tbody>
+                        </table>
                 </div>
             </div>
             <div class="interactcontainer">
