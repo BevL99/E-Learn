@@ -15,7 +15,8 @@
         }
         .right{
             width:30%;
-            background: rgba(227, 228, 255, 0.842);
+            height:100%;
+            background: #FAFAFA;
         }
         hr.rounded {
             border-top: 6px solid #bbb;
@@ -41,7 +42,7 @@
         .previous{
             height: 150px;
             background: white;
-            color: rgb(81,81,206);
+            
             margin-left: 20px;
             margin-right: 20px;
             margin-top: 30px;
@@ -59,27 +60,50 @@
             padding-left:5px;
             padding-right: 5px;
         }
+                .top-container {
+            background-color: #ffffff;
+            padding: 10px;
+            border-bottom: 10px solid black;
+        }
     </style>
 </head>
+<div class="top-container">
+
+    <img src="unsw_elearn_blk.jpg" alt="logo" class="logo" height="50" width="220" />
+</div>
 <body>
 <div class="wrapper">
-    <div class="top_navbar">
+    <div class="top_navbar" style="padding-top:80px">
         <div class="hamburger">
-                <li><a href="student_home_pg.php">
-                <i class ="fas fa-arrow-left"></i></a>
-            </li>        
+            <li>
+                <a href="student_home_pg.php">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </li>
         </div>
         <div class="top_menu">
             <div class="logo">Course Details</div>
             <ul>
-                <li><a href="student_home_pg.php">
-                    <i class="fas fa-home"></i></a></li>
-                <li><a href="#">
-                    <i class="fas fa-cog"></i></a></li>
-                <li><a href="#">
-                    <i class="far fa-user"></i></a></li>
-                <li><a href="login_page.php">
-                    <i class="fas fa-sign-out-alt"></i></a></li>
+                <li>
+                    <a href="student_home_pg.php">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="login_page.php">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -120,6 +144,7 @@
 
                         </tbody>
                         </table>
+                        <br />
                     </div>
                 </section>
             </div>          
@@ -127,25 +152,81 @@
         </div>
       
         <div class="right">
-            <section class = "previous">
-                <div class ="content">
+            <section class ="previous">
+                <section class="content" style="color: #F05E23">
                     <h4>Week 7: Sprint Ceremonies</h4>
-                </div>
+
+                </section>
+                <section class="content">
+                <div>
+                       <br /> 
+                        <ul>
+                            <li> - Daily Stand-up</li>
+                        </ul>
+                        <ul>
+                            <li> - Conducting Sprint Review</li>
+                        </ul>
+                        <ul>
+                            <li> - Sprint Retrospective</li>
+                        </ul>
+                    </div>
+                </section>
             </section>
             <section class = "previous">
-                <div class ="content">
+                <div class="content" style="color: #F05E23">
                     <h4>Week 6: Agile Sprints</h4>
-                </div>
+                    </div>
+                    <section class="content">
+                        <div>
+                            <br />
+                            <ul>
+                                <li> - Phases in a sprint</li>
+                            </ul>
+                            <ul>
+                                <li> - Organising a sprint</li>
+                            </ul>
+                            <ul>
+                                <li> - Measuring success</li>
+                            </ul>
+                        </div>
+                    </section>
+                
             </section>
             <section class = "previous">
-                <div class ="content">
+                <div class="content" style="color: #F05E23">
                     <h4>Week 5: Agile Roles</h4>
                 </div>
+                <section class="content">
+                    <div>
+                        <br />
+                        <ul>
+                            <li> - Product Owner, Scrum Master & Agile Team</li>
+                        </ul>
+                        <ul>
+                            <li> - Responsibility</li>
+                        </ul>
+                        <ul>
+                            <li> - Agile Leadership</li>
+                        </ul>
+                    </div>
+                </section>
             </section>
             <section class = "previous">
-                <div class ="content">
+                <div class="content" style="color: #F05E23">
                     <h4>Week 4: Agile Scrum</h4>
                 </div>
+                <section class="content">
+                    <div>
+                        <br />
+                        <ul>
+                            <li> - Implementation Methodology</li>
+                        </ul>
+                        <ul>
+                            <li> - What is Agile Scrum?</li>
+                        </ul>
+                        
+                    </div>
+                </section>
             </section>
         </div>
     </div>

@@ -20,12 +20,22 @@
             margin-top: 40px;
         }
 
+        .top-container {
+            background-color: #ffffff;
+            padding: 10px;
+            border-bottom: 10px solid black;
+        }
+
     </style>
+    <div class="top-container">
+
+        <img src="unsw_elearn_blk.jpg" alt="logo" class="logo" height="50" width="220">
+    </div>
 </head>
 <body>
 
 <div class="wrapper">
-    <div class="top_navbar">
+    <div class="top_navbar"style="padding-top:80px">
         <div class="hamburger">
                 <li><a href="student_home_pg.php">
                 <i class ="fas fa-arrow-left"></i></a>
@@ -67,15 +77,23 @@
             <div class="workshop">
             <ul>
                 <li><a href="student_session_activity.php">
-                <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
-                <span class="title">INFS3617 W8</span></a></li>
+                <span class="icon"><i class="fas fa-school" style="font-size:40px; color: #F05E23"></i></span>
+                <span class="title">INFS3605</span></a></li>
             </div>
             <div class="workshop">
             <ul>
                 <li><a href="student_session_activity.php">
-                <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
-                <span class="title">INFS3605 W8</span></a></li>
+                <span class="icon"><i class="fas fa-school" style="font-size:40px;  color: #F79862"></i></span>
+                <span class="title">INFS3617</span></a></li>
             </div>
+
+            <div class="workshop">
+            <ul>
+                <li><a href="student_session_activity.php">
+                <span class="icon"><i class="fas fa-school" style="font-size:40px;  color: #FFC594"></i></span>
+                <span class="title">INFS3830</span></a></li>
+            </div>
+
         </div>
 
         <h2>Past Sessions</h2>
@@ -84,14 +102,20 @@
             <div class="workshop">
             <ul>
                 <li><a href="student_session_activity.php">
-                <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
-                <span class="title">INFS3617 W7</span></a></li>
+                <span class="icon"><i class="fas fa-school" style="font-size:40px;  color: #F05E23"></i></span>
+                <span class="title">INFS3605</span></a></li>
             </div>
             <div class="workshop">
             <ul>
                 <li><a href="student_session_activity.php">
-                <span class="icon"><i class="fas fa-school" style="font-size:40px"></i></span>
-                <span class="title">INFS3605 W7</span></a></li>
+                <span class="icon"><i class="fas fa-school" style="font-size:40px;  color: #F79862"></i></span>
+                <span class="title">INFS3617</span></a></li>
+            </div>
+            <div class="workshop">
+            <ul>
+                <li><a href="student_session_activity.php">
+                <span class="icon"><i class="fas fa-school" style="font-size:40px;  color: #FFC594"></i></span>
+                <span class="title">INFS3830</span></a></li>
             </div>
         </div>
 

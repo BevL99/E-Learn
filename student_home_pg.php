@@ -38,7 +38,7 @@
         margin-left: 10px;
         margin-right: 10px;
         padding:10px;
-        background: rgba(220, 220, 255, 0.65);
+        background: #FAFAFA;
         color:rgb(124, 124, 255);
         text-align: left;
     }
@@ -46,16 +46,17 @@
     .top-container {
             background-color: #ffffff;
             padding: 10px;
+            border-bottom: 10px solid black;
         }
 
 </style>
-
-<body>
-<div class="wrapper">
-    <div class="top-container">
+<div class="top-container">
 
         <img src="unsw_elearn_blk.jpg" alt="logo" class="logo" height="50" width="220">
     </div>
+<body>
+<div class="wrapper" style="background-color:#FAFAFA">
+    
     <div class="top_navbar"style="padding-top:80px">
         <div class="top_menu">
             <div class="logo">Home</div>
@@ -75,23 +76,27 @@
         <div class="left">
         <section class="summaryitems">
             <div class="container">
-            <h4><a href="student_workspace_session.php">Click to enter your Workspace</a></h4>
+                
+                
+            <h4 style="color:#F05E23"><a href="student_workspace_session.php" style="color:#F05E23">Click to enter your Workspace</a></h4>
             </div>
         </section>
         
 
         <section class="summaryitems">
             <div class="container">
-            <h4>Announcements</h4>
+            <h4 style="color:#F05E23">Announcements</h4>
+                 <p style="color:#444444">INFS3605: Individual Assignment Extension </p>
+                    <p style="color:#444444">INFS3617: Please complete the 'My Experience Survey'</p>
             </div>
         </section>
 
         <section class="summaryitems">
             <div class="container">
-                <h4>Your Upcoming Submissions</h4>
-                <br />
-                    INFS3605 Assignment 1 <br />
-                    INFS3830 3rd Hands-On Assignment
+                <h4 style="color:#F05E23">Your Upcoming Submissions</h4>
+                
+                    <p style="color:#444444">INFS3605: Assignment 1 </p>
+                    <p style="color:#444444">INFS3830: 3rd Hands-On Assignment</p>
                 
             </div>
         </section>
@@ -101,32 +106,32 @@
         <div class="right">
             <section class = "courses">
                 <div class ="content">
-                <a href="student_course_detail_pg.php" target="_blank">
-                    <h4>INFS3605</h4></a>
-                    <p>
+                <a href="student_course_detail_pg.php" target="_blank" style="color:#F05E23">
+                    <h4 style="color:#F05E23">INFS3605</h4></a>
+                    <p style="color: #444444">
                     IS Innovation & Transformation
                     </p>
-                    <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3605" target="_blank">Course Outline</a>
+                    <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3605" target="_blank" style="color: #444444">Course Outline</a>
                 </div>
             </section>
 
             <section class = "courses">
                 <div class ="content">
-                    <h4>INFS3617</h4>
-                    <p>
+                    <h4 style="color:#F05E23">INFS3617</h4>
+                    <p style="color: #444444">
                     Networking & Cyber Security
                     </p>
-                    <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3617" target="_blank">Course Outline</a>
+                    <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3617" target="_blank" style="color: #444444">Course Outline</a>
                 </div>
             </section>
 
             <section class = "courses">
                 <div class ="content">
-                <h4>INFS3830</h4>
-                <p>
+                <h4 style="color:#F05E23">INFS3830</h4>
+                <p style="color: #444444">
                 Social Media and Analytics
                 </p>
-                <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3830" target="_blank">Course Outline</a>
+                <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3830" target="_blank" style="color: #444444">Course Outline</a>
                 </div>
             </section>
         </div>

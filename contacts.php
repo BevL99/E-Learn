@@ -34,15 +34,25 @@ td, th {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #FAFAFA;
 }
 
+.top-container {
+            background-color: #ffffff;
+            padding: 10px;
+            border-bottom: 10px solid black;
+        }
+
     </style>
+    <div class="top-container">
+
+        <img src="unsw_elearn_blk.jpg" alt="logo" class="logo" height="50" width="220">
+    </div>
 </head>
 <body>
 
 <div class="wrapper">
-    <div class="top_navbar">
+    <div class="top_navbar" style="padding-top:80px">
         <div class="hamburger">
                 <li><a href="student_home_pg.php">
                 <i class ="fas fa-arrow-left"></i></a>

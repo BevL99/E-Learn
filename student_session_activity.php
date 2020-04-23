@@ -20,11 +20,11 @@
                 };
         })(window, document, []);
     </script>
-</head>
 
 
 
-<style>
+
+    <style>
     .containdiv{
         width:100%;
         height:100%;
@@ -36,7 +36,7 @@
     }
 
     .containdiv .videocontainer {
-        padding-top:80px;
+        padding-top:160px;
         padding-left: 5px;
         padding-right:360px;
         padding-bottom: 10px;
@@ -74,12 +74,12 @@
 
     .containdiv .interactcontainer{
         right:0;
-        top:20;
-        padding-top:80px;
         
+        padding-top:220px;
+
         position:absolute;
         width: 350px;
-        height: 709px;
+        height: 748px;
         display: block;
     }
 
@@ -100,7 +100,7 @@
         height: 100%;
         width: 350px;
         bottom:0;
-        padding-top:60px;
+        padding-top:100px;
         position:absolute;
         display: flex;
         flex: 0 0 1px;
@@ -161,7 +161,7 @@
         height:100%;
         width:100%;
         bottom:0;
-        padding-top:150px;
+        padding-top:190px;
         margin-bottom:50px;
         position:absolute;
     }
@@ -204,11 +204,22 @@
             padding-left:5px;
             padding-right: 5px;
         }
-</style>
+
+            .top-container {
+            background-color: #ffffff;
+            padding: 10px;
+            border-bottom: 10px solid black;
+        }
+    </style>
+</head>
+<div class="top-container">
+
+    <img src="unsw_elearn_blk.jpg" alt="logo" class="logo" height="50" width="220" />
+</div>
 
 <body>
     <div class="wrapper">
-        <div class="top_navbar">
+        <div class="top_navbar" style="padding-top:80px">
             <div class="hamburger">
                 <li>
                     <a href="student_workspace_session.php">
