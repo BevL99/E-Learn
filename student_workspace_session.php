@@ -54,7 +54,9 @@
             <li><a href="contacts.php">
                 <span class="icon"><i class="fas fa-address-book"></i></span>
                 <span class="title">Contacts</span></a></li>
-            
+            <li><a href="student_upload_pg.php">
+                <span class="icon"><i class="fas fa-upload"></i></span>
+                <span class="title">Upload</span></a></li>
         </ul>
     </div>
 

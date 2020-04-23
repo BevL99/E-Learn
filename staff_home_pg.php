@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php include 'student_filesLogic.php';?>
 <html>
 <head>
         <title>E-Learn Home</title>
@@ -47,6 +47,39 @@
             background-color: #ffffff;
             padding: 10px;
         }
+        table {
+            margin:0;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            height: 30px;
+            vertical-align: center;
+            border: 1px solid black;
+            padding-left:5px;
+            padding-right: 5px;
+        }
+            hr.rounded {
+            border-top: 6px solid #bbb;
+            border-radius: 5px;
+            width:90%;
+            margin-bottom:10px;
+        }
+        hr.rounded2 {
+            border-top: 2px solid #bbb;
+            border-radius: 5px;
+            width:40%;
+        }
+            .weekcontent .content{
+            margin-left:20px;
+        }
+        .weekcontent .content ul{
+            list-style-type: square;
+            color:black;
+            margin-bottom: 3px;
+            display:list-item;
+            margin-left:20px;
+        }
 
 </style>
 
@@ -77,14 +110,16 @@
         <div class="left">
         <section class="summaryitems">
             <div class="container">
-            <h4><a href="staff_wkspace_session.php">Click to enter your Workspace</a></h4>
+            <h4><a href="staff_wkspace_session.php">Enter your Workspace</a></h4>
             </div>
         </section>
         
 
         <section class="summaryitems">
             <div class="container">
-            <h4>Your Announcements</h4>
+                <h4>
+                    <a href="get_submission.php">View recent student submissions</a>
+                </h4>
             </div>
         </section>
 
@@ -92,8 +127,12 @@
             <div class="container">
                 <h4>Upcoming Student Submissions</h4>
                 <br />
-                    INFS3605 Assignment 1 <br />
+                    INFS3605 Assignment 1 
+                <br />
                     INFS3830 3rd Hands-On Assignment
+                <br />
+                
+                
                 
             </div>
         </section>

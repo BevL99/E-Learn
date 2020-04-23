@@ -102,21 +102,21 @@
             <section class = "courses">
                 <div class ="content">
                 <a href="student_course_detail_pg.php" target="_blank">
-                    <h4>INFS3617</h4></a>
+                    <h4>INFS3605</h4></a>
                     <p>
-                    Networking & Cyber Security
+                    IS Innovation & Transformation
                     </p>
-                    <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3617" target="_blank">Course Outline</a>
+                    <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3605" target="_blank">Course Outline</a>
                 </div>
             </section>
 
             <section class = "courses">
                 <div class ="content">
-                    <h4>INFS3605</h4>
+                    <h4>INFS3617</h4>
                     <p>
-                    IS Innovation & Transformation
+                    Networking & Cyber Security
                     </p>
-                    <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3605" target="_blank">Course Outline</a>
+                    <a href="https://www.business.unsw.edu.au/degrees-courses/course-outlines/INFS3617" target="_blank">Course Outline</a>
                 </div>
             </section>
 
